@@ -1,10 +1,10 @@
 mixin list-drop(url, info)
-  li: a(href="/#{url}") #{info}
+  li: a(href="{{site.baseurl}}/#{url}") #{info}
 
 .shop-list.container-shadow
   .menu
     ul.panels
-      li: a(href="/").activated.ellipsis-text.top-lists Men's
+      li: a(href="{{site.baseurl}}/").activated.ellipsis-text.top-lists Men's
         ul.drop-menu.drop-it.menu-1
           +list-drop('index.html', 'T-Shirts')
           +list-drop('index.html', 'Classic T-Shirts')
@@ -17,7 +17,7 @@ mixin list-drop(url, info)
           +list-drop('index.html', 'Hoodies')
           +list-drop('index.html', 'Sweatshirts')
 
-      li: a(href="/").ellipsis-text.top-lists Women's
+      li: a(href="{{site.baseurl}}/").ellipsis-text.top-lists Women's
         ul.drop-menu.drop-it.menu-2
           +list-drop('index.html', 'T-Shirts')
           +list-drop('index.html', 'Chiffon Tops')
@@ -32,13 +32,13 @@ mixin list-drop(url, info)
           +list-drop('index.html', 'Leggins')
           +list-drop('index.html', 'Mini Skirts')
 
-      li: a(href="/").ellipsis-text.top-lists Hats
+      li: a(href="{{site.baseurl}}/").ellipsis-text.top-lists Hats
         ul.drop-menu.drop-it.menu-3
           +list-drop('index.html', 'Snapback Hats')
           +list-drop('index.html', 'Baseball Caps')
           +list-drop('index.html', 'Beanies')
 
-      li: a(href="/").ellipsis-text.top-lists Cases/Skins
+      li: a(href="{{site.baseurl}}/").ellipsis-text.top-lists Cases/Skins
         ul.drop-menu.drop-it.menu-4
           +list-drop('index.html', 'Iphone Cases')
           +list-drop('index.html', 'Phone Wallets')
@@ -47,9 +47,9 @@ mixin list-drop(url, info)
           +list-drop('index.html', 'Laptop Skins')
           +list-drop('index.html', 'Laptop Sleeves')
 
-      li: a(href="/").ellipsis-text.top-lists Stickers
+      li: a(href="{{site.baseurl}}/").ellipsis-text.top-lists Stickers
 
-      li: a(href="/").ellipsis-text.top-lists Wall Art
+      li: a(href="{{site.baseurl}}/").ellipsis-text.top-lists Wall Art
         ul.drop-menu.drop-it.menu-6
           +list-drop('index.html', 'Posters')
           +list-drop('index.html', 'Canvas Prints')
@@ -59,7 +59,7 @@ mixin list-drop(url, info)
           +list-drop('index.html', 'Framed Prints')
           +list-drop('index.html', 'Metal Prints')
 
-      li: a(href="/").ellipsis-text.ellipsis-text.top-lists Home Decor
+      li: a(href="{{site.baseurl}}/").ellipsis-text.ellipsis-text.top-lists Home Decor
         ul.drop-menu.drop-it.menu-7
           +list-drop('index.html', 'Throw Pillows')
           +list-drop('index.html', 'Rectangular Pillows')
@@ -77,7 +77,7 @@ mixin list-drop(url, info)
           +list-drop('index.html', 'Clocks')
           +list-drop('index.html', 'Acrylic Blocks')
 
-      li: a(href="/").ellipsis-text.top-lists Stationery
+      li: a(href="{{site.baseurl}}/").ellipsis-text.top-lists Stationery
         ul.drop-menu.drop-it.menu-8
           +list-drop('index.html', 'Greeting Cards')
           +list-drop('index.html', 'Postcards')
@@ -85,7 +85,7 @@ mixin list-drop(url, info)
           +list-drop('index.html', 'Spiral Notebooks')
           +list-drop('index.html', 'Hardcover Journals')
 
-      li: a(href="/").ellipsis-text.top-lists Bags
+      li: a(href="{{site.baseurl}}/").ellipsis-text.top-lists Bags
         ul.drop-menu.drop-it.menu-9
           +list-drop('index.html', 'Tote Bags')
           +list-drop('index.html', 'Studio Pouches')

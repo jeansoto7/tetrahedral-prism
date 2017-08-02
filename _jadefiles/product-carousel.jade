@@ -6,7 +6,7 @@ mixin shopslider(href, iconimg, title, buttoninfo)
           img(src="{{site.baseurl}}/assets/img/home/shop-carousel/#{iconimg}", title="#{title}", alt="#{title}").imgshop.imgzoom
       .carousel-shop-button
         h3 #{title}
-        a(href="/#{href}")
+        a(href="{{site.baseurl}}/#{href}")
           button.info-shop-button #{buttoninfo}
 
 .product-carousel.the-heading.container-shadow

@@ -1,6 +1,6 @@
 mixin icon(href, iconimg, iconinfo, className)
-  .icon-box: a(href="/#{href}")
-    img(src="/assets/img/shop/icons/#{iconimg}", title="#{iconinfo}", alt="#{iconinfo}")(class=className)
+  .icon-box: a(href="{{site.baseurl}}/#{href}")
+    img(src="{{site.baseurl}}/assets/img/shop/icons/#{iconimg}", title="#{iconinfo}", alt="#{iconinfo}")(class=className)
     p #{iconinfo}
 //- mixin shop-products(href, image, title, price)
 //-   .product-box
@@ -13,11 +13,11 @@ mixin icon(href, iconimg, iconinfo, className)
 
 mixin shop-products(href, image, title, price)
   figure.product-box
-    a(href="/#{href}")
+    a(href="{{site.baseurl}}/#{href}")
       .product-image
-        img.lazyload(data-src="/assets/img/shop/products/#{image}", title="#{title}", alt="#{title}")
+        img.lazyload(data-src="{{site.baseurl}}/assets/img/shop/products/#{image}", title="#{title}", alt="#{title}")
     .product-caption
-      h3.ellipsis-text: a(href="/#{href}") #{title}
+      h3.ellipsis-text: a(href="{{site.baseurl}}/#{href}") #{title}
       p #{price}
 
 

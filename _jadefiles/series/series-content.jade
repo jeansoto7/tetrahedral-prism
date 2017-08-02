@@ -1,13 +1,13 @@
 mixin series-products(href, image, title, day)
   .product-box
-    a(href="/#{href}")
+    a(href="{{site.baseurl}}/#{href}")
       .product-image
-        img.lazyload.blur-up(data-sizes='(max-width: 550px) 50vw, (max-width: 700px) 33.4vw, (min-width: 2560px) 16.7vw, 25vw', src='/assets/img/series/#{image}', data-srcset='\
-        /assets/img/series/#{image} 768w, /assets/img/series/#{image} 1024w,\
-        /assets/img/series/#{image} 1366w,\
-        /assets/img/series/#{image} 1920w,\
-        /assets/img/series/#{image} 2560w,\
-        /assets/img/series/#{image} 3840w', title="#{title}", alt="#{title}")
+        img.lazyload.blur-up(data-sizes='(max-width: 550px) 50vw, (max-width: 700px) 33.4vw, (min-width: 2560px) 16.7vw, 25vw', src='{{site.baseurl}}/assets/img/series/#{image}', data-srcset='\
+        {{site.baseurl}}/assets/img/series/#{image} 768w, {{site.baseurl}}/assets/img/series/#{image} 1024w,\
+        {{site.baseurl}}/assets/img/series/#{image} 1366w,\
+        {{site.baseurl}}/assets/img/series/#{image} 1920w,\
+        {{site.baseurl}}/assets/img/series/#{image} 2560w,\
+        {{site.baseurl}}/assets/img/series/#{image} 3840w', title="#{title}", alt="#{title}")
         .product-caption
           h2 #{title}
           p #{day}
