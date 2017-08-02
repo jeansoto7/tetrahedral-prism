@@ -1,0 +1,25 @@
+mixin fbtu-image(backgroundimg, className)
+  a(target="_blank" href="https://www.facebook.com/officialcr7designs/" style="background-image: url(/assets/img/contact/facebook/#{backgroundimg})").fbtu-thumb(class=className)
+
+
+.contact-facebook.content-height.container-shadow
+
+  .overlay.content-height
+
+  .fbtu-overlap.content-height
+    a(target="_blank" href="https://www.facebook.com/officialcr7designs/")
+      img(src="/assets/img/contact/facebook/fb-overlap.jpg")
+
+
+  .fbtu-images
+    +fbtu-image('fb-thumb1.jpg', 'fbtu-thumb1')
+    +fbtu-image('fb-thumb1.jpg', 'fbtu-thumb2')
+    +fbtu-image('fb-thumb1.jpg', 'fbtu-thumb1')
+    +fbtu-image('fb-thumb1.jpg', 'fbtu-thumb2')
+
+  .info-content.content-height.info-content-right
+    h1 Facebook
+    hr.thehr
+    p Stay updated on Facebook, give my page a like
+    a(target="_blank" href="https://www.facebook.com/officialcr7designs/")
+      button.info-shop-button.info-contact-button Follow

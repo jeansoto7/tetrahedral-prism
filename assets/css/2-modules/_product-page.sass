@@ -1,0 +1,422 @@
+// Products
+.product-page
+
+  .product-images
+    background: white
+
+  .product-background
+    cursor: zoom-in
+
+  .product-imgs
+    width: 100%
+    height: $base-spacing*3.5
+    position: absolute
+    z-index: 1
+    justify-content: flex-end
+    padding: $base-spacing/4 $base-spacing/2
+    bottom: 0
+    pointer-events: none
+
+  .other-img
+    cursor: pointer
+    pointer-events: auto
+    margin-left: $base-spacing/2
+    width: auto
+    height: 100%
+
+  .options-1, .options-2, .options-2 p, .product-imgs, .triangles, .triback, .share-it, .box-colors
+    display: flex
+
+  .product-options
+    .options-1, .options-2
+      margin: $base-spacing/2 0
+
+    .options-1
+
+      button
+        width: calc(100%/6)
+        border: 1px solid $cr7-lightgrey
+        padding: 0
+
+    .options-2
+
+      p
+        justify-content: center
+        align-items: center
+        font-weight: 400
+        width: 15%
+        font-size: $base-spacing*0.8
+
+      button
+        width: 50%
+        border: 1px solid $cr7-lightgrey
+
+  .features
+    margin-top: -$base-spacing/2
+    ul
+      padding: 0 $base-spacing
+      line-height: 1.5
+
+    li
+      font-size: $base-spacing*0.9
+
+    li:before
+      content: ""
+      border-color: transparent $cr7-darkgrey
+      border-style: solid
+      border-width: 0.30em 0 0.35em 0.45em
+      display: block
+      height: 0
+      width: 0
+      left: -1em
+      top: 0.9em
+      position: relative
+
+  .clothing-style
+    h4
+      font-size: $base-spacing*1.1
+      margin-bottom: $base-spacing/4
+
+    .select-option
+      display: flex
+      height: $base-spacing*2
+      width: 50%
+      position: relative
+      margin-bottom: $base-spacing
+
+    ul.drop-menu
+      cursor: pointer
+      padding-left: $base-spacing/2
+      border: 1px solid $cr7-darkgrey
+      z-index: 9
+      overflow: hidden
+      height: auto
+
+      li
+        margin-left: -$base-spacing/2
+        padding-left: $base-spacing/2
+        transform: translateY(-500px)
+        opacity: 0
+        height: auto
+        max-height: 0
+
+      li.active
+        background: $cr7-fifthgrey
+
+    .select-triangle
+      content: ""
+      @include triangle($base-spacing*0.7 $base-spacing/1.8, $cr7-darkgrey, down)
+      position: absolute
+      right: $base-spacing/2
+      top: 50%
+      transform: translateY(-70%)
+
+    ul.drop-menu.is-open
+      li
+        transform: translateY(0px)
+        opacity: 1
+        height: 100%
+        max-height: 500px
+
+  .box-colors
+    flex-wrap: wrap
+    margin-top: $base-spacing/2
+
+  .triback
+    margin-right: $base-spacing
+    margin-left: $base-spacing*0.15
+
+  .triangles:hover .tricolor-top, .triback:hover .triimg
+    margin-top: -$base-spacing*0.4
+
+  .triangles:hover .tricolor-active, .triback:hover .tricolor-active
+    margin-top: $base-spacing*0.01
+
+  .triangles, .triback
+    height: $base-spacing*2.7
+    margin-bottom: $base-spacing/5
+    justify-content: center
+
+  .triangles
+    width: $base-spacing*2.5
+    margin-right: $base-spacing*0.8
+
+  .tricolor-top, .tricolor-bottom, .tricolor-active
+    position: absolute
+
+  .triangles, .triback
+    .tricolor-active
+      display: none
+
+  .active-color
+    .tricolor-active
+      display: block
+
+
+// Products & Artworks
+.product-page, .artworks-page
+  padding: $base-spacing 0
+  display: flex
+  min-height: 38vw
+
+  .product-images:hover .prdback, .product-background:hover img
+    transform: translateY(-50%) translateX(-50%) scale(1.05)
+
+  .product-images
+    height: auto
+    width: 50%
+    position: relative
+
+  .product-background, .collection-img, .shop-images
+    position: relative
+    overflow: hidden
+    height: 100%
+
+    img
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translateY(-50%) translateX(-50%)
+      margin: auto
+      height: 100%
+      transition: all 0.5s ease-in-out
+
+  .product-content
+    width: 50%
+    padding: 0 $base-spacing
+
+  hr
+    margin: $base-spacing/2 auto
+    width: 100%
+    border: 0
+    border-top: 1px solid rgba(51, 51, 51, 0.3)
+
+  .pro-hr
+    display: none
+
+  .product-info
+    h2
+      line-height: 1.1
+      font-size: $base-spacing*1.7
+      font-weight: 400
+    h3
+      color: $cr7-thirdgrey
+      font-style: italic
+      font-size: $base-spacing*1.05
+    p
+      font-size: $base-spacing*1.2
+      font-weight: 400
+      margin-top: $base-spacing/4
+
+  button
+    padding: 0 $base-spacing/2
+
+  .buy-now
+    button
+      width: 100%
+      height: $base-spacing*3.8
+
+
+// Artworks
+.artworks-page
+
+  .arrows-carousel
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+
+  // .toggle-right, .toggle-left
+  //   border: 2px solid red
+  //   background: fade-out($cr7-lightgrey, 0.7)
+
+  .fa-angle-right, .fa-angle-left
+    font-size: $base-spacing*3
+
+  .fa-angle-right
+    margin-right: $base-spacing/3
+
+  .fa-angle-left
+    margin-left: $base-spacing/3
+
+  .product-background img
+    pointer-events: none
+
+  .next-images, .next-products, .share-it
+    display: flex
+
+  .next-images
+    height: $base-spacing*7.5
+    margin-top: $base-spacing/3
+    position: relative
+
+  .next-products
+    height: $base-spacing*10
+
+  .collection-img
+    width: 100%
+
+  .next-products
+    flex-wrap: wrap
+
+  .shop-images
+    width: calc(100%/6)
+    height: 50%
+    background: white
+
+  // .collection-img
+  //   border-left: 1px solid $cr7-darkgrey
+  //
+  //   &:first-child
+  //     border-left: 0
+
+  .shop-images:hover img, .collection-img:hover img
+    transform: translateY(-50%) translateX(-50%) scale(1.1)
+
+  .next-images:after
+    content: ""
+    position: absolute
+    top: -40px
+    left: 0
+    right: 0
+    margin-left: auto
+    margin-right: auto
+    @include triangle(25px 40px, $cr7-darkgrey, up)
+
+  .available-products
+    hr
+      margin-bottom: 0
+    h4
+      margin-bottom: $base-spacing/2
+
+@media #{$mq-xlarge}
+  .artworks-page
+    .next-images
+      height: 9vw
+    .next-products
+      height: 11vw
+
+@media #{$mq-xxlarge}
+  .artworks-page
+    .next-images
+      height: 10vw
+    .next-products
+      height: 12vw
+
+@media #{$mq-xxxlarge}
+  .artworks-page
+    .next-images
+      height: 11vw
+    .next-products
+      height: 13vw
+
+@media #{$mc-xxlarge}
+  .product-page
+    .clothing-style
+      .select-option
+        width: 100%
+
+@media (max-width: 53.125em) and (min-width: 43.750em), #{$mc-medium}
+  .artworks-page
+    .shop-images
+      width: 25%
+
+    .next-images
+      margin-top: 35px
+
+    .collection-img:nth-child(1), .collection-img:nth-child(5), .shop-images:nth-child(9), .shop-images:nth-child(10), .shop-images:nth-child(11), .shop-images:nth-child(12)
+      display: none
+
+@media #{$mc-xlarge}
+  .artworks-page, .product-page
+    flex-wrap: wrap
+
+    .product-images
+      height: 70vw
+
+    .product-content, .product-images, .buy-now, .product-info, .product-options, .share-it
+      width: 100%
+
+    .product-info
+      text-align: center
+      h2
+        margin-top: $base-spacing/3
+
+  // Product Page
+  .product-page
+    text-align: center
+    flex-wrap: wrap
+
+    .product-content, .col-right, .col-left
+      display: flex
+      flex-wrap: wrap
+
+    .share-it
+      flex-wrap: wrap
+
+    .share-button, .download-button
+      width: 100%
+
+    .download-button
+      margin-top: $base-spacing/2
+      margin-left: 0
+
+    .drop-menu
+      text-align: left
+
+    .col-right, .col-left
+      width: 50%
+      padding: 0 $base-spacing/2
+      align-items: center
+
+    .col-left
+      border-right: 1px solid #ccc
+
+    .box-colors
+      text-align: left
+      justify-content: center
+
+    .features, .clothing-style
+      hr
+        display: none
+
+    .pro-hr
+      display: block
+
+@media #{$mc-medium}
+  .artworks-page
+    text-align: center
+
+    .next-images
+      margin-top: $base-spacing*2
+
+  .artworks-page, .product-page
+    .product-images
+      height: 90vw
+
+  .product-page
+    text-align: center
+
+    .product-imgs
+      height: 15vw
+
+    .clothing-style
+
+    .col-right, .col-left
+      width: 100%
+      padding: 0
+
+    .col-left
+      border-right: 0
+
+@media #{$mc-jsmall}
+  .artworks-page
+    .share-it
+      flex-wrap: wrap
+
+    .share-button, .download-button
+      width: 100%
+
+    .download-button
+      margin-top: $base-spacing/2
+      margin-left: 0

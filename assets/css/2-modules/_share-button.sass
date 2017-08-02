@@ -1,0 +1,116 @@
+// Share Button & Download Button
+.share-button, .download-button
+  width: 50%
+  height: $base-spacing*2
+  text-transform: uppercase
+  border: 1px solid $cr7-darkgrey
+  display: flex
+  align-items: center
+  justify-content: center
+  position: relative
+  transition: all 0.3s ease-in-out
+  cursor: pointer
+
+  &:hover
+    background-color: rgba(51, 51, 51, 0.6)
+
+  p, a
+    font-size: $base-spacing*0.7
+    width: 100%
+    font-weight: 400
+
+  p, .download-anchor, .icon-wrapper
+    padding: 0 $base-spacing/1.5
+
+  .share-icon, .share-icon:after, .icon-wrapper, a, p, .download-icon, .download-triangle, .icon-wrapper i
+    transition: all 0.3s ease-in-out
+
+.download-button:hover a, .share-button:hover .share-icon, .share-button:hover .share-icon:after,
+.share-button:hover .icon-wrapper i
+  color: $cr7-lightgrey
+
+.download-button a, .share-icon, .icon-wrapper ul
+  height: 100%
+  display: flex
+  align-items: center
+
+
+// Share Old Design
+.share-button
+  overflow: hidden
+
+  .share-icon:after, .icon-wrapper
+    font-size: $base-spacing*1.2
+
+  .share-icon:after
+    font-family: FontAwesome
+    color: $cr7-darkgrey
+    content: "\f064"
+    margin-left: $base-spacing/1.5
+
+  .icon-wrapper
+    position: absolute
+    width: 100%
+    height: 100%
+    transform: translateX(-100%)
+    cursor: auto
+
+  .icon-wrapper ul
+    justify-content: space-between
+
+  .icon-wrapper li
+    width: 15%
+
+    &:last-child
+      width: 30%
+      display: flex
+      justify-content: flex-end
+
+  .icon-wrapper i
+    padding-bottom: $base-spacing/10
+
+    &:hover
+      -webkit-text-stroke: $base-spacing/20 $cr7-lightgrey
+      color: rgba(51, 51, 51, 0.3)
+      border-bottom: $base-spacing/20 solid $cr7-lightgrey
+
+    &:last-child
+      cursor: pointer
+
+  i.fa-instagram:hover
+    -webkit-text-stroke: $base-spacing/40 $cr7-lightgrey
+
+  i.fa-pinterest-p:hover
+    -webkit-text-stroke: $base-spacing/30 $cr7-lightgrey
+
+.share-button.is-open .icon-wrapper
+  transform: translateX(0%)
+
+.share-button.is-open .share-icon
+  transform: translateX(120%)
+
+// Download Button
+.download-button
+  margin-left: $base-spacing/1.5
+
+  a
+    justify-content: space-between
+    width: 100%
+
+  .download-icon
+    border-bottom: 2px solid $cr7-darkgrey
+
+  .download-triangle
+    @include triangle($base-spacing $base-spacing*0.8, $cr7-darkgrey, down)
+
+.download-button:hover .download-icon
+  border-bottom: 2px solid $cr7-lightgrey
+
+.download-button:hover .download-triangle
+  @include triangle(13px 10px, $cr7-lightgrey, down)
+
+
+@media (max-width: 53.125em)
+  .share-button, .download-button
+    p, a
+      font-size: 0.75em

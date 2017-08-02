@@ -1,0 +1,210 @@
+.shop-content, .series-content
+
+  .title-icon, .title-series
+    padding: $base-spacing*1.5 $base-spacing/2
+
+  h1, h2, h3, p
+    text-align: center
+
+  .products, .series
+    display: flex
+    flex-wrap: wrap
+
+  .product-box
+    position: relative
+    width: 25%
+    margin: 0
+
+    // @for $i from 1 through 24
+    //   &:nth-child(#{$i})
+    //     animation:
+    //       name: landing
+    //       duration: 150ms * ($i+1)
+    //       timing-function: ease-in-out
+    //       fill-mode: forwards
+    //       delay: 150ms
+
+  // .product-box
+  //   opacity: 0
+  //   transition: $base-transition
+  //   transform: translateX(-5%)
+
+    // &.product-animation
+    //   opacity: 1
+    //   transform: translateX(0)
+
+  .product-box p
+    margin: 0 auto
+    display: table
+    font-weight: 400
+
+
+  .product-image
+    overflow: hidden
+    position: relative
+
+    img
+      width: 100%
+      height: auto
+      transition: $base-transition
+
+  .shopbutton, .seriesbutton
+    padding: 3.5% 0
+    display: flex
+
+    button
+      width: 50%
+      height: $base-spacing*3.5
+      margin: auto
+      font-size: $base-spacing/1.5
+
+      &:hover
+        border: 1px solid $cr7-lightgrey
+
+
+// Shop
+.shop-content
+
+  .title-icon
+    display: flex
+    flex-direction: column
+
+  .product-box
+    border: 1px solid #ccc
+    padding: $base-spacing/2 $base-spacing/2
+
+  .product-image
+    img
+      &:hover
+        transform: scale(1.1)
+
+  .overflow-y
+    margin-top: $base-spacing*1.5
+    display: flex
+    justify-content: space-around
+
+  .icon-box
+    width: $base-spacing*4
+    height: $base-spacing*6.5
+
+    img
+      padding: $base-spacing/4
+      width: 100%
+      height: auto
+      transition: $base-transition
+
+    p
+      font-size: $base-spacing*0.7
+      font-weight: 400
+
+  .active-icon
+    background-color: rgba(51, 51, 51, 0.3)
+
+  .icon-box a:hover > img
+    background-color: rgba(51, 51, 51, 0.3)
+
+  .icon-box a
+    display: block
+
+  .products
+    margin: $base-spacing $base-spacing/2 0
+
+  .product-caption
+    h3
+      font-size: $base-spacing*1.4
+
+    p
+      font-size: $base-spacing*1.1
+
+// Series
+.series-content
+
+  .shop-description
+    padding: 0 $base-spacing/2
+    margin-bottom: 0
+    margin-top: $base-spacing/2
+    font-size: $base-spacing*1.1
+
+  .product-box
+    overflow: hidden
+
+  .product-caption
+    position: absolute
+    background: fade-out($cr7-darkgrey, 0.3)
+    bottom: 0
+    top: 0
+    left: 0
+    right: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    padding: $base-spacing/2
+    pointer-events: none
+    opacity: 0
+    transition: $base-transition
+    transform: translate(0%, 100%) scale(0.5)
+
+    h2, p
+      color: fade-out($cr7-lightgrey, 0.1)
+      margin: 0
+
+    p
+      border-bottom: 1px solid $cr7-lightgrey
+      font-size: $base-spacing*1.1
+
+    h2
+      font-weight: 400
+
+  .product-image:hover .product-caption
+    opacity: 1
+    transform: translate(0%, 0%) scale(1)
+
+  .product-image:hover img
+    transform: scale(1.1)
+
+
+@media #{$mq-xxlarge}
+  .shop-content, .series-content
+    .product-box
+      width: calc(100%/6)
+
+@media #{$mc-xxlarge}
+  .series-content
+    .product-caption
+      h2
+        font-size: $base-spacing*1.5
+
+
+@media #{$mc-xlarge}
+  .shop-content, .series-content
+
+    .product-box
+      width: calc(100%/3)
+
+  .shop-content
+    .icons
+      overflow-x: scroll
+      overflow-y: hidden
+
+    .overflow-y
+      width: 900px
+
+@media #{$mc-large}, #{$tq-large}
+  .series-content
+    .product-caption
+      h2
+        font-size: $base-spacing*1.2
+      p
+        font-size: $base-spacing*0.9
+
+@media #{$mc-mmedium}
+  .shop-content, .series-content
+
+    .product-box
+      width: 50%
+
+  .shop-content
+    .product-caption
+      h4
+        font-size: 1.3em

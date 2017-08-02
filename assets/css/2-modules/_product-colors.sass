@@ -1,0 +1,100 @@
+.tricolor-top, .tricolor-active, .triimg
+  transition: all 0.3s ease-in-out
+
+.tricolor-top
+  margin-top: $base-spacing/10
+
+.tricolor-bottom
+  @include triangle($base-spacing*2.5 $base-spacing*2.25, $cr7-fourthgrey, down)
+
+.tricolor-active
+  @include triangle($base-spacing*0.8 $base-spacing*0.7, $cr7-fourthgrey, down)
+  margin-top: $base-spacing*0.55
+
+.white
+  .tricolor-top
+    @include triangle($base-spacing*2.2 $base-spacing*1.95, $product-white, down)
+
+.black
+  .tricolor-top
+    @include triangle($base-spacing*2.2 $base-spacing*1.95, $product-black, down)
+
+.light-grey
+  .tricolor-top
+    @include triangle($base-spacing*2.2 $base-spacing*1.95, $product-light-grey, down)
+
+.dark-grey
+  .tricolor-top
+    @include triangle($base-spacing*2.2 $base-spacing*1.95, $product-dark-grey, down)
+
+.light-blue
+  .tricolor-top
+    @include triangle($base-spacing*2.2 $base-spacing*1.95, $product-light-blue, down)
+
+.blue
+  .tricolor-top
+    @include triangle($base-spacing*2.2 $base-spacing*1.95, $product-blue, down)
+
+.dark-blue
+  .tricolor-top
+    @include triangle($base-spacing*2.2 $base-spacing*1.95, $product-dark-blue, down)
+
+.creme
+  .tricolor-top
+    @include triangle($base-spacing*2.2 $base-spacing*1.95, $product-creme, down)
+
+.gold
+  .tricolor-top
+    @include triangle($base-spacing*2.2 $base-spacing*1.95, $product-gold, down)
+
+.orange
+  .tricolor-top
+    @include triangle($base-spacing*2.2 $base-spacing*1.95, $product-orange, down)
+
+.red
+  .tricolor-top
+    @include triangle($base-spacing*2.2 $base-spacing*1.95, $product-red, down)
+
+.dark-red
+  .tricolor-top
+    @include triangle($base-spacing*2.2 $base-spacing*1.95, $product-dark-red, down)
+
+.eggplant
+  .tricolor-top
+    @include triangle($base-spacing*2.2 $base-spacing*1.95, $product-eggplant, down)
+
+.green
+  .tricolor-top
+    @include triangle($base-spacing*2.2 $base-spacing*1.95, $product-green, down)
+
+.army
+  .tricolor-top
+    @include triangle($base-spacing*2.2 $base-spacing*1.95, $product-army, down)
+
+.brown
+  .tricolor-top
+    @include triangle($base-spacing*2.2 $base-spacing*1.95, $product-brown, down)
+
+
+.triback
+  position: relative
+  width: $base-spacing*2.15
+
+  .tricolor-bottom
+    z-index: -1
+
+  .triimg, .triimg img
+    margin-top: $base-spacing/20
+    width: 100%
+    height: 100%
+
+  .triimg
+    margin-left: $base-spacing*0.02
+    overflow: hidden
+    position: absolute
+    transform: skewX(-29deg)
+    transform-origin: 100% 0
+
+  .triimg img
+    transform: skewX(48deg)
+    transform-origin: inherit

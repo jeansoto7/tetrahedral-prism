@@ -1,0 +1,39 @@
+.home-image-download
+  overflow: hidden
+
+  .download-bg-1, .homeback
+    width: 100%
+
+  .download-bg-1
+    position: absolute
+    z-index: 1
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    pointer-events: none
+
+    h2
+      text-align: center
+      margin: 0 $base-spacing/3 $base-spacing/2
+      color: $cr7-lightgrey
+
+    button, h2
+      pointer-events: auto
+
+  .homeback
+    background:
+      size: cover
+      repeat: no-repeat
+      position: 50% 50%
+    transition: all 1.5s ease-in-out
+
+.home-image-download:hover .homeback
+  transform: scale(1.1)
+
+@media #{$mc-large}
+  .home-image-download
+    height: 400px
+
+    .download-bg-1, .overlay, .homeback
+      height: 400px

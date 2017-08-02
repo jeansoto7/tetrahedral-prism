@@ -1,0 +1,77 @@
+.contact-social
+  margin: auto
+  padding: $base-spacing*2
+
+  .social-info
+    width: 95%
+    margin: auto
+
+  .social-icon
+    display: flex
+    justify-content: space-around
+    margin: $base-spacing*2.4 0
+
+  .fa
+    font-size: $base-spacing*1.5
+    transition: all 0.3s ease-in-out
+
+    &:hover, &:focus, &:active
+      -webkit-text-stroke: 1px $cr7-darkgrey
+      cursor: pointer
+      color: rgba(51, 51, 51, 0.3)
+
+      &:first-child
+        -webkit-text-stroke: 0.5px $cr7-darkgrey
+
+  .email
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    hr
+      margin: auto
+      margin-bottom: $base-spacing*2
+      width: 50%
+      border-top: 1px solid rgba(51, 51, 51, 0.2)
+    a
+      p
+        font-size: $base-spacing*1.4
+        letter-spacing: $base-spacing
+        margin-bottom: $base-spacing/2
+
+@media #{$mc-xxlarge}, #{$tq-medium}, #{$tq-large}
+  .contact-social
+    .email
+      a
+        p
+          letter-spacing: $base-spacing/2
+
+@media #{$mc-xxlarge}
+  .contact-social
+    .fa
+      font-size: $base-spacing*1.2
+
+@media #{$mc-large}
+  .contact-social
+    .email
+      a
+        p
+          letter-spacing: $base-spacing/5
+
+@media #{$mc-xmedium}
+  .contact-social
+    .email
+      a
+        p
+          letter-spacing: 0
+
+@media #{$mc-jsmall}
+  .contact-social
+    padding-left: 0
+    padding-right: 0
+
+    .email
+      a
+        p
+          max-width: 100%
+          font-size: $base-spacing*1.1

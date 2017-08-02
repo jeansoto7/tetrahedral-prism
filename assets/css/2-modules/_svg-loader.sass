@@ -1,0 +1,102 @@
+#theloader
+  display: flex
+  align-items: center
+  height: 100vh
+  width: 100%
+  z-index: 9999
+  background: $cr7-lightgrey
+  // animation-name: fadeOutRight
+  // animation-name:  fadeOut
+  animation-duration: 0.5s
+  position: fixed
+  top: 0
+  left: 0
+  transition: $base-transition
+
+  #triangle
+    height: 60vmin
+    width: 100%
+    opacity: 0.8
+
+  // .st1, .st2
+  //   fill: none
+  //   stroke: #000000
+  //   stroke-width: 2
+  //
+  // .poly1
+  // 	stroke-dasharray: 300
+  // 	animation: dash 2.5s cubic-bezier(0.57, 0.04, 0.5, 0.97) infinite
+  //
+  // .poly1
+  //   stroke-width: 4
+  //
+  // .poly-top
+  //   stroke: none
+  //   fill: $cr7-lightgrey
+  //   transform: scale(1.5)
+  //
+  //
+  // .st1
+  //   animation-name: pulse
+  //   animation-duration: 2.5s
+  //   transform-origin: center
+  //   animation-fill-mode: both
+  //   animation-iteration-count: infinite
+  //   animation-timing-function: cubic-bezier(0.57, 0.04, 0.5, 0.97)
+
+  svg polygon
+  	stroke-dasharray: 20
+  	animation: dash 2.5s cubic-bezier(0.57, 0.04, 0.5, 0.97) infinite
+
+  polygon
+    fill: transparent
+
+  img
+    opacity: 0.8
+    position: absolute
+    height: 55vmin
+    width: 100%
+    margin-top: -0.4vmax
+    pointer-events: none
+    animation-name: pulse
+    animation-duration: 2.5s
+    animation-fill-mode: both
+    animation-iteration-count: infinite
+    animation-timing-function: cubic-bezier(0.57, 0.04, 0.5, 0.97)
+
+@keyframes dash
+	to
+		// stroke-dashoffset: 2400
+		stroke-dashoffset: 160
+
+@keyframes pulse
+  from
+    transform: scale3d(1, 1, 1)
+
+  50%
+    transform: scale3d(0.95, 0.95, 0.95)
+
+  to
+    transform: scale3d(1, 1, 1)
+
+// 1450px
+@media (max-width: 90.625em)
+  .theloader
+    img
+      margin-top: -0.5%
+
+// 1150px
+@media (max-width: 71.875em)
+  .theloader
+    img
+      margin-top: -0.6%
+
+@media #{$mc-xxxxlarge}
+  .theloader
+    img
+      margin-top: -0.8%
+
+@media #{$mc-xlarge}
+  .theloader
+    img
+      margin-top: -1vmin

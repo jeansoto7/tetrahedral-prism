@@ -1,0 +1,301 @@
+.home-shop-carousel
+  display: flex
+
+  .shop-slider
+    padding-left: $base-spacing/2
+    width: 80%
+
+  .shop-slider-left
+    padding-right: $base-spacing/2
+    padding-left: 0
+
+  .triangle-previous, .triangle-next
+    width: 39%
+    position: absolute
+    display: flex
+    align-items: center
+    justify-content: center
+    pointer-events: none
+    z-index: 2
+
+  .triangle-next
+    right: 0
+
+  .hide-content-top
+    display: none
+
+  .shop-image-anchors
+    height: 12.2vw
+
+.home-shop-carousel, .product-carousel
+  overflow: hidden
+
+  .arrow-shop-carouselright, .arrow-shop-carouselleft
+    cursor: pointer
+    transition: $base-transition
+    pointer-events: auto
+
+  .arrow-shop-carouselleft
+    @include triangle($base-spacing*2.45 $base-spacing*2, $cr7-darkred, left)
+
+    &:hover
+      border-right: $base-spacing*2 solid $cr7-lightred
+
+  .arrow-shop-carouselright
+    @include triangle($base-spacing*2.45 $base-spacing*2, $cr7-darkred, right)
+
+    &:hover
+      border-left: $base-spacing*2 solid $cr7-lightred
+
+  .shop-slider, .shop-slide
+    display: flex
+
+  .shop-slider-left
+    flex-direction: row-reverse
+
+  .shop-slides
+    min-width: 20.02%
+    padding: 0 $base-spacing/4
+    border-right: 1px solid #ccc
+
+  .shop-slides-right
+    border-right: 0
+    border-left: 1px solid #ccc
+
+  .shop-slide, .imgshop
+    height: 100%
+
+  .shop-slide
+    margin: 0 $base-spacing/4
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+  .shop-image-anchors
+    overflow: hidden
+
+  .imgshop
+    width: auto
+
+  .carousel-shop-button
+    text-align: center
+    width: 100%
+
+// Product Carousel
+.product-carousel
+  padding-top: $base-spacing*1.5
+  padding-bottom: $base-spacing*3.5
+  position: relative
+
+  .social-heading
+    margin-bottom: $base-spacing
+
+  .shop-slider, .triangle-toggle, .triangle-previous, .triangle-next
+    display: flex
+
+  .shop-slider
+    width: 90%
+    overflow: hidden
+    margin: auto
+
+  .shop-slides
+    border: 1px solid #ccc
+
+  .shop-image-anchors
+    height: 14vw
+
+  .triangle-toggle
+    position: absolute
+    top: 0
+    z-index: 2
+    width: 100%
+    height: 100%
+    justify-content: space-between
+    align-items: center
+    pointer-events: none
+
+  .triangle-previous, .triangle-next
+    width: 5%
+    justify-content: center
+    pointer-events: auto
+
+  .triangle-previous:hover .arrow-shop-carouselleft
+    transform: translateX(-5px)
+
+  .triangle-next:hover .arrow-shop-carouselright
+    transform: translateX(5px)
+
+@media #{$mc-xxxlarge}, #{$tq-medium}, #{$tq-large}
+  // ---
+  .home-shop-carousel
+
+    .shop-slider
+      width: 75%
+
+    .info-content
+      width: 25%
+
+    .triangle-previous, .triangle-next
+      width: 48.7%
+
+    .shop-image-anchors
+      height: 22.5vw
+
+  // ---
+  .product-carousel
+    .shop-image-anchors
+      height: 25vw
+
+  // ---
+  .home-shop-carousel, .product-carousel
+
+    .shop-slides
+      min-width: 33.38%
+
+@media #{$tq-large}
+  .home-shop-carousel
+
+    .triangle-previous, .triangle-next
+      width: 50%
+
+    .info-content
+      padding: 0 35px
+
+    .arrow-shop-carouselleft
+      @include triangle($base-spacing*1.8 $base-spacing*1.4, $cr7-darkred, left)
+
+      &:hover
+        border-right: $base-spacing*1.4 solid $cr7-lightred
+
+    .arrow-shop-carouselright
+      @include triangle($base-spacing*1.8 $base-spacing*1.4, $cr7-darkred, right)
+
+      &:hover
+        border-left: $base-spacing*1.4 solid $cr7-lightred
+
+@media #{$mc-xxlarge} and #{$mc-minlarge}
+  .product-carousel
+    .arrow-shop-carouselleft
+      @include triangle($base-spacing*1.9 $base-spacing*1.5, $cr7-darkred, left)
+
+      &:hover
+        border-right: $base-spacing*1.5 solid $cr7-lightred
+
+    .arrow-shop-carouselright
+      @include triangle($base-spacing*1.9 $base-spacing*1.5, $cr7-darkred, right)
+
+      &:hover
+        border-left: $base-spacing*1.5 solid $cr7-lightred
+
+@media #{$mc-large}
+  .home-shop-carousel
+
+    .triangle-toggle
+      bottom: 60px
+
+    .shop-slider-left, .hide, .info-content
+      display: block
+
+    .display-none-shop
+      display: none
+
+    .info-content
+      width: 100%
+      box-shadow: none
+
+      hr
+        padding-bottom: $base-spacing/2
+
+      hr, p
+        margin: auto
+
+      p
+        width: 300px
+
+    .hide-content-buttom
+      display: none
+
+  .home-shop-carousel, .product-carousel
+    height: 100%
+    flex-direction: column
+    align-items: center
+    position: relative
+    padding: $base-spacing/2 0
+
+    .triangle-toggle
+      position: absolute
+      width: 95%
+      max-width: 350px
+      height: 50px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      pointer-events: none
+      z-index: 2
+      bottom: 50px
+
+    .triangle-previous, .triangle-next
+      width: auto
+      height: auto
+
+    .arrow-shop-carouselright, .arrow-shop-carouselleft
+      transform: rotate(90deg)
+
+    .shop-slides, .shop-slider, .shop-slider-left
+      max-height: 470px
+      height: 100%
+
+    .shop-slider
+      overflow: hidden
+      padding: 0
+
+    .shop-slides
+      padding: $base-spacing 0
+
+    .shop-slider, .shop-slider-left
+      width: 100%
+      flex-direction: column
+
+    .shop-slide
+      margin: 0
+      justify-content: flex-start
+
+    .shop-image-anchors, .imgshop
+      height: auto
+      max-height: 350px
+
+    .carousel-shop-button
+      h3
+        margin: $base-spacing/4 0
+        font-size: $base-spacing*1.5
+
+  .product-carousel
+    padding: $base-spacing 0
+
+    .social-heading
+      margin: 0
+
+    .container-shadow
+      box-shadow: none
+
+    .product-slider
+      display: flex
+      justify-content: center
+
+    .triangle-toggle
+      top: auto
+
+    .shop-slides
+      border: 0
+
+    .triangle-previous:hover .arrow-shop-carouselleft, .triangle-next:hover .arrow-shop-carouselright
+      transform: rotate(90deg)
+
+@media (max-width: 22.500em)
+  .home-shop-carousel, .product-carousel
+
+    .triangle-toggle
+      width: 100%
+
+    .triangle-previous, .triangle-next
+      width: 70px

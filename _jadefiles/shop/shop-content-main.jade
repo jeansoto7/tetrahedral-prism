@@ -1,0 +1,70 @@
+mixin icon(href, iconimg, iconinfo, className)
+  .icon-box: a(href="/#{href}")
+    img(src="/assets/img/shop/icons/#{iconimg}", title="#{iconinfo}", alt="#{iconinfo}")(class=className)
+    p #{iconinfo}
+//- mixin shop-products(href, image, title, price)
+//-   .product-box
+//-     a(href="#{href}").product-anchor
+//-       .product-image
+//-         img(src="/assets/img/shop/products/#{image}", title="#{title}", alt="#{title}")
+//-     .product-caption
+//-       h4: a(href="#{href}") #{title}
+//-       p #{price}
+
+mixin shop-products(href, image, title, price)
+  figure.product-box
+    a(href="/#{href}")
+      .product-image
+        img.lazyload(data-src="/assets/img/shop/products/#{image}", title="#{title}", alt="#{title}")
+    .product-caption
+      h3.ellipsis-text: a(href="/#{href}") #{title}
+      p #{price}
+
+
+.shop-content
+
+  .title-icon.container-shadow
+    h1.shop-title Featured
+    hr.thehr
+
+    .icons
+      .overflow-y
+        +icon('products', 'men-tshirts.png', 'Men T-Shirts', 'active-icon')
+        +icon('products', 'women-tshirts.png', 'Women T-Shirts')
+        +icon('products', 'phone-cases.png', 'Phone Cases')
+        +icon('products', 'laptop-skins.png', 'Laptop Skins')
+        +icon('products', 'art-prints.png', 'Art Prints')
+        +icon('products', 'throw-pillows.png', 'Pillows')
+        +icon('products', 'drawstring-bags.png', 'Drawstring Bags')
+        +icon('products', 'mugs.png', 'Mugs')
+        +icon('products', 'clocks.png', 'Clocks')
+        +icon('products', 'greeting-cards.png', 'Greeting Cards')
+
+  .products
+    +shop-products('products', 'men/men-tshirts/wannabe.jpg', 'Wannabe a niggah all day and tommorrow', '$25.63')
+    +shop-products('products', 'men/men-tshirts/wannabe15.jpg', 'Wannabe', '$25.63')
+    +shop-products('products', 'men/men-tshirts/wannabe2.jpg', 'Wannabe', '$25.63')
+    +shop-products('products', 'men/men-tshirts/wannabe3.jpg', 'Wannabe', '$25.63')
+    +shop-products('products', 'men/men-tshirts/wannabe4.jpg', 'Wannabe', '$25.63')
+    +shop-products('products', 'men/men-tshirts/wannabe5.jpg', 'Wannabe', '$25.63')
+    +shop-products('products', 'men/men-tshirts/wannabe6.jpg', 'Wannabe', '$25.63')
+    +shop-products('products', 'men/men-tshirts/wannabe7.jpg', 'Wannabe', '$25.63')
+    +shop-products('products', 'men/men-tshirts/wannabe8.jpg', 'Wannabe', '$25.63')
+    +shop-products('products', 'men/men-tshirts/wannabe9.jpg', 'Wannabe', '$25.63')
+    +shop-products('products', 'men/men-tshirts/wannabe10.jpg', 'Wannabe', '$25.63')
+    +shop-products('products', 'men/men-tshirts/wannabe11.jpg', 'Wannabe', '$25.63')
+    +shop-products('products', 'men/men-tshirts/wannabe12.jpg', 'Wannabe', '$25.63')
+    +shop-products('products', 'men/men-tshirts/wannabe13.jpg', 'Wannabe', '$25.63')
+    +shop-products('products', 'men/men-tshirts/wannabe14.jpg', 'Wannabe', '$25.63')
+    +shop-products('products', 'men/men-tshirts/wannabe15.jpg', 'Wannabe', '$25.63')
+    +shop-products('products', 'men/men-tshirts/wannabe5.jpg', 'Wannabe', '$25.63')
+    +shop-products('products', 'men/men-tshirts/wannabe2.jpg', 'Wannabe', '$25.63')
+    +shop-products('products', 'men/men-tshirts/wannabe4.jpg', 'Wannabe', '$25.63')
+    +shop-products('products', 'men/men-tshirts/wannabe3.jpg', 'Wannabe', '$25.63')
+    +shop-products('products', 'men/men-tshirts/wannabe3.jpg', 'Wannabe', '$25.63')
+    +shop-products('products', 'men/men-tshirts/wannabe3.jpg', 'Wannabe', '$25.63')
+    +shop-products('products', 'men/men-tshirts/wannabe3.jpg', 'Wannabe', '$25.63')
+    +shop-products('products', 'men/men-tshirts/wannabe3.jpg', 'Wannabe', '$25.63')
+
+  .shopbutton
+    button Load More...

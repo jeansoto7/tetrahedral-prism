@@ -1,0 +1,26 @@
+mixin fbtu-image(backgroundimg, className)
+  a(target="_blank" href="http://www.cr7designs.tumblr.com/" style="background-image: url(/assets/img/contact/tumblr/#{backgroundimg})").fbtu-thumb(class=className)
+
+
+.contact-tumblr.content-height.container-shadow
+
+
+  .info-content.content-height.info-content-left
+    h1 Tumblr
+    hr.thehr
+    p Stay updated on Tumblr, give my page a like
+    a(target="_blank" href="http://www.cr7designs.tumblr.com/")
+      button.info-shop-button.info-contact-button Follow
+
+  .overlay.content-height
+
+  .fbtu-overlap.content-height
+    a(target="_blank" href="http://www.cr7designs.tumblr.com/")
+      img(src="/assets/img/contact/tumblr/tu-overlap.jpg")
+
+
+  .fbtu-images
+    +fbtu-image('tu-thumb1.jpg', 'fbtu-thumb1')
+    +fbtu-image('tu-thumb1.jpg', 'fbtu-thumb2')
+    +fbtu-image('tu-thumb1.jpg', 'fbtu-thumb1')
+    +fbtu-image('tu-thumb1.jpg', 'fbtu-thumb2')

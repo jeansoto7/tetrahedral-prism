@@ -1,0 +1,33 @@
+mixin shopslider(href, iconimg, title, buttoninfo)
+  .shop-slides.content-height.hsc1
+    .shop-slide
+      a(href="/#{href}")
+        .shop-image-anchors
+          img(src="/assets/img/home/shop-carousel/#{iconimg}", title="#{title}", alt="#{title}").imgshop.imgzoom.lazyload
+      .carousel-shop-button
+        h3.ellipsis-text #{title}
+        a(href="/#{href}")
+          button.info-shop-button #{buttoninfo}
+
+.home-shop-carousel.content-height.container-shadow
+
+  .triangle-toggle
+    .triangle-previous.content-height
+      .arrow-shop-carouselleft
+    .triangle-next.content-height
+      .arrow-shop-carouselright.hide
+
+  .info-content.info-content-left
+    h1 Instagram
+    hr.thehr
+    p Shop a wide range of products. Delite with awesomeness
+    a(href="/products")
+      button.info-shop-button.display-none-shop Shop Now
+
+  .shop-slider
+    +shopslider('products', 'thirtpreview1.jpg', 'T-Shirts', 'Shop Now')
+    +shopslider('products', 'thirtpreview1.jpg', 'T-Shirts', 'Shop Now')
+    +shopslider('products', 'thirtpreview1.jpg', 'T-Shirts', 'Shop Now')
+    +shopslider('products', 'thirtpreview1.jpg', 'T-Shirts', 'Shop Now')
+    +shopslider('products', 'thirtpreview1.jpg', 'T-Shirts', 'Shop Now')
+    +shopslider('products', 'thirtpreview1.jpg', 'T-Shirts', 'Shop Now')

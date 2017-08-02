@@ -1,0 +1,44 @@
+mixin carousel(title, href, info, bottoninfo, backgroundimg)
+  li.slide
+    .carousel-info-button.carousel-height
+      h1 #{title}
+      p #{info}
+      a(href="/#{href}")
+        button.top-carousel-button.button #{bottoninfo}
+    .overlay.carousel-height
+    .carousel-image.carousel-height(style="background-image: url(/assets/img/series/carousel/#{backgroundimg})")
+
+.carousel.carousel-height
+  #slider-wrap
+    .arrows-carousel.carousel-height
+      #toggle-left
+        i.previousarrow.fa.fa-angle-left
+      #toggle-right
+        i.nextarrow.fa.fa-angle-right
+
+
+    #slider-paging.carousel-height
+      ul.slider-pages
+        li#slider-page-1.slider-page
+          .triangle-bottom
+          .triangle-top
+        li#slider-page-2.slider-page
+          .triangle-bottom
+          .triangle-top
+        li#slider-page-3.slider-page
+          .triangle-bottom
+          .triangle-top
+        li#slider-page-4.slider-page
+          .triangle-bottom
+          .triangle-top
+        li#slider-page-5.slider-page
+          .triangle-bottom
+          .triangle-top
+
+    #slider
+      ul.slides
+        +carousel('Image1', 'collections', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 'Check Check', 'carousel1.jpg')
+        +carousel('Image2', 'collections', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 'Check Check', 'carousel1.jpg')
+        +carousel('Image3', 'collections', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 'Check Check', 'carousel2.jpg')
+        +carousel('Image4', 'collections', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 'Check Check', 'carousel2.jpg')
+        +carousel('Image5', 'collections', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 'Check Check', 'carousel2.jpg')

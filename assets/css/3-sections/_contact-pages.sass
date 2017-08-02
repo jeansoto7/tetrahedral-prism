@@ -1,0 +1,290 @@
+//Black&White Hover
+.blackwhite-hover
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale")
+  -webkit-filter: grayscale(100%)
+  -moz-filter: grayscale(100%)
+  -ms-filter: grayscale(100%)
+  filter: grayscale(100%)
+  filter: gray
+  transition: all 0.3s ease-in-out
+
+  &:hover
+    -webkit-filter: none
+    -moz-filter: none
+    -ms-filter: none
+    filter: none
+
+
+// Contact Social pages
+.fbtu-images, .igpin-images
+  width: 80%
+  overflow: hidden
+
+
+// Instagram & Pinterest
+.contact-instagram, .contact-pinterest
+  width: 100%
+  display: flex
+
+  .igpin-thumb
+    background:
+      size: cover
+      position: center center
+    width: 20%
+    height: 50%
+    float: left
+    transition: all 0.3s ease-in-out
+
+    &:nth-child(11), &:nth-child(12)
+      display: none
+
+    &.ani-shake
+      z-index: 1
+      animation-name: shake
+      animation-duration: 1s
+      animation-fill-mode: both
+
+    &:after
+      content: ''
+      display: block
+      padding-top: 100%
+
+    // @for $i from 1 through 24
+    //   &:nth-child(#{$i})
+    //     animation:
+    //       name: landing
+    //       duration: 150ms * ($i+1)
+    //       timing-function: ease-in-out
+    //       fill-mode: forwards
+    //       delay: 150ms
+
+
+// Facebook & Tumblr
+.contact-facebook, .contact-tumblr
+  width: 100%
+  display: flex
+
+  .fbtu-images, .fbtu-overlap
+    display: flex
+
+  .fbtu-overlap, .overlay
+    width: 80%
+    position: absolute
+
+  .fbtu-overlap
+    justify-content: center
+    align-items: center
+
+    a
+      height: 80%
+      width: 50%
+      overflow: hidden
+      z-index: 4
+      position: relative
+      box-shadow: 0px 2px 46px 10px rgba(51, 51, 51, 0.2)
+
+    img
+      position: absolute
+      width: 100%
+      left: 50%
+      top: 50%
+      transform: translateY(-50%) translateX(-50%)
+      transition: all 0.3s ease-in-out
+      height: auto
+
+      &:hover
+        transform: translateY(-50%) translateX(-50%) scale(1.05)
+
+  .fbtu-thumb
+    background:
+      size: cover
+      position: center center
+    width: 25%
+    margin-right: $base-spacing/2.7
+
+    &:last-child
+      margin: 0
+
+.contact-tumblr
+  .fbtu-overlap, .overlay
+    right: 0
+
+// Contact Twitter
+.contact-twitter
+  min-height: 20.75vw
+  display: flex
+
+  .info-content
+
+  #exampleList
+    display: none
+
+  #exampleProfile
+    width: 80%
+
+    p, a
+      font-size: $base-spacing*0.85
+
+
+    a, a:visited
+      color: $cr7-lightred
+      transition: $base-transition
+
+
+    a:hover
+      border-bottom: 2px solid $cr7-lightred
+
+    ul
+      display: flex
+
+    li
+      width: 20%
+      padding: $base-spacing/4
+      position: relative
+
+    ul li
+      overflow: hidden
+      border-right: 1px solid #ccc
+
+  .user, .tweet, .interact
+    width: 100%
+    margin-bottom: $base-spacing*0.8
+
+  .user
+    position: relative
+    margin-bottom: $base-spacing*2
+
+  .timePosted
+    display: none
+
+  .interact
+    a
+      margin-right: 5%
+
+  .interact a
+    &:first-child
+      display: none
+
+  .user a > span
+    &:nth-child(2)
+      bottom: -$base-spacing*2
+      left: 0
+      border-bottom: 1px solid $cr7-lightred
+      position: absolute
+      transition: $base-transition
+
+      &:hover
+        border-bottom: 2px solid $cr7-lightred
+
+    &:nth-child(3)
+      display: none
+
+  .user img
+    width: auto
+    height: 100%
+
+  .media
+    overflow: hidden
+
+  .media img
+    width: 100%
+    height: auto
+    transition: $base-transition
+
+    &:hover
+      transform: scale(1.05)
+
+
+@media #{$mc-xxxlarge}, #{$tq-medium}
+  .contact-facebook, .contact-tumblr, .contact-instagram, .contact-pinterest, .contact-twitter
+    .info-content
+      width: 25%
+
+    .fbtu-images, .fbtu-overlap, .overlay
+      width: 75%
+
+    #exampleProfile
+      li
+        width: 25%
+
+      li:last-child
+        display: none
+
+  .contact-facebook, .contact-tumblr
+    .fbtu-overlap
+      a
+        width: 70%
+
+@media #{$mc-large}
+  .contact-tumblr, .contact-instagram, .contact-twitter
+    flex-direction: column
+    .fbtu-overlap, .overlay
+      bottom: 0
+
+  .contact-pinterest, .contact-facebook
+    flex-direction: column-reverse
+
+  .contact-facebook, .contact-tumblr, .contact-instagram, .contact-pinterest, .contact-twitter
+    height: auto
+
+    .info-content
+      height: 250px
+      width: 100%
+
+    .info-content-right
+      box-shadow: 0px 2px 4px 1px rgba(51, 51, 51, 0.2)
+
+    .igpin-images
+      width: 100%
+      overflow: hidden
+
+    .igpin-thumb
+      width: 25%
+
+      &:nth-child(11), &:nth-child(12)
+        display: block
+
+    .fbtu-images, .fbtu-overlap, .overlay
+      width: 100%
+      height: 400px
+
+    .fbtu-overlap
+      a
+        padding: 50px
+        width: 100%
+        height: 100%
+
+      img
+        width: 80%
+
+    .fbtu-thumb
+      margin-right: 3px
+
+    #exampleProfile
+      width: 100%
+      li
+        width: calc(100%/3)
+
+      li:nth-child(4)
+        display: none
+
+
+@media #{$mc-jsmall}
+  .contact-instagram, .contact-pinterest
+
+    .igpin-thumb
+      width: calc(100%/3)
+
+  .contact-twitter
+    #exampleProfile
+      text-align: center
+      li
+        width: 50%
+
+      li:nth-child(3)
+        display: none
+
+    .user a > span
+      &:nth-child(2)
+        left: 50%
+        transform: translateX(-50%)

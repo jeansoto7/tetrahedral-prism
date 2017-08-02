@@ -1,0 +1,41 @@
+mixin shopsliderright(href, iconimg, title, buttoninfo)
+  ul.shop-slides.shop-slides-right.content-height.hsc2
+    li.shop-slide
+      a(href="/#{href}")
+        .shop-image-anchors
+          img(src="/assets/img/home/shop-carousel/#{iconimg}", title="#{title}", alt="#{title}").imgshop.imgzoom.lazyload
+      .carousel-shop-button
+        h3.ellipsis-text #{title}
+        a(href="/#{href}")
+          button.info-shop-button #{buttoninfo}
+
+
+.home-shop-carousel.hscContainer2.content-height.container-shadow
+
+  .triangle-toggle
+    .triangle-previous.content-height
+      .arrow-shop-carouselleft.hide
+    .triangle-next.content-height
+      .arrow-shop-carouselright
+
+  .info-content.info-content-right.hide-content-top
+    h1 Delite
+    hr.thehr
+    p Shop a wide range of products. Delite with awesomeness
+    a(href="/products")
+      button.info-shop-button.display-none-shop Shop Now
+
+  .shop-slider.shop-slider-left
+    +shopsliderright('products', 'thirtpreview1.jpg', 'T-Shirts', 'Shop Now')
+    +shopsliderright('products', 'thirtpreview1.jpg', 'T-Shirts', 'Shop Now')
+    +shopsliderright('products', 'thirtpreview1.jpg', 'T-Shirts', 'Shop Now')
+    +shopsliderright('products', 'thirtpreview1.jpg', 'T-Shirts', 'Shop Now')
+    +shopsliderright('products', 'thirtpreview1.jpg', 'T-Shirts', 'Shop Now')
+    +shopsliderright('products', 'thirtpreview1.jpg', 'T-Shirts', 'Shop Now')
+
+  .info-content.info-content-right.hide-content-buttom
+    h1 Delite
+    hr.thehr
+    p Shop a wide range of products. Delite with awesomeness
+    a(href="/products")
+      button.info-shop-button.display-none-shop Shop Now

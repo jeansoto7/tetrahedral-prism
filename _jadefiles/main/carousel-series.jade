@@ -1,0 +1,49 @@
+mixin carousel(title, href, info, bottoninfo, backgroundimg)
+  li.slide
+    .carousel-info-button.carousel-height
+      h1 #{title}
+      p #{info}
+      a(href="/#{href}")
+        button.top-carousel-button.button #{bottoninfo}
+    .overlay.carousel-height
+    .carousel-image.lazyload.carousel-height(data-sizes='(max-width: 900px) 100vw, 80vw', data-bgset='\
+    /assets/img/series/#{backgroundimg}-small.jpg 768w, /assets/img/series/#{backgroundimg}-medium.jpg 1024w,\
+    /assets/img/series/#{backgroundimg}-large.jpg 1366w,\
+    /assets/img/series/#{backgroundimg}-xlarge.jpg 1920w,\
+    /assets/img/series/#{backgroundimg}-xxlarge.jpg 2560w,\
+    /assets/img/series/#{backgroundimg}-xxxlarge.jpg 3840w', title="#{title}")
+
+.carousel.carousel-height
+  #slider-wrap
+    .arrows-carousel.carousel-height
+      #toggle-left
+        i.previousarrow.fa.fa-angle-left
+      #toggle-right
+        i.nextarrow.fa.fa-angle-right
+
+
+    #slider-paging.carousel-height
+      ul.slider-pages
+        li#slider-page-1.slider-page
+          .triangle-bottom
+          .triangle-top
+        li#slider-page-2.slider-page
+          .triangle-bottom
+          .triangle-top
+        li#slider-page-3.slider-page
+          .triangle-bottom
+          .triangle-top
+        li#slider-page-4.slider-page
+          .triangle-bottom
+          .triangle-top
+        li#slider-page-5.slider-page
+          .triangle-bottom
+          .triangle-top
+
+    #slider
+      ul.slides
+        +carousel('Image1', 'collections', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 'Check Check', 'equilateral/equilateral8')
+        +carousel('Image2', 'collections', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 'Check Check', 'equilateral/equilateral8')
+        +carousel('Image3', 'collections', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 'Check Check', 'equilateral/equilateral8')
+        +carousel('Image4', 'collections', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 'Check Check', 'equilateral/equilateral8')
+        +carousel('Image5', 'collections', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 'Check Check', 'equilateral/equilateral8')

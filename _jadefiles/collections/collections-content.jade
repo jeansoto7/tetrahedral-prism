@@ -1,0 +1,42 @@
+mixin series-products(href, image, title)
+  .product-box
+    a(href="/#{href}")
+      .product-image
+        img(src="/assets/img/collections/#{image}", title="#{title}", alt="#{title}")
+        .product-caption
+          h2 #{title}
+
+.series-content
+
+  .title-series
+    h1.shop-title Equilateral Collection
+    hr.thehr
+
+  .series
+    +series-products('collections/equilateral', 'equilateral/equilateral3.jpg', 'The Marylin')
+    +series-products('collections/equilateral', 'equilateral/equilateral4.jpg', 'Wannabe a niggah all day and tommorrow')
+    +series-products('collections/equilateral', 'equilateral/equilateral5.jpg', 'Wannabe a niggah all day and tommorrow')
+    +series-products('collections/equilateral', 'equilateral/equilateral6.jpg', 'Wannabe a niggah all day and tommorrow')
+    +series-products('collections/equilateral', 'equilateral/equilateral7.jpg', 'Wannabe a niggah all day and tommorrow')
+    +series-products('collections/equilateral', 'equilateral/equilateral8.jpg', 'Wannabe a niggah all day and tommorrow')
+    +series-products('collections/equilateral', 'equilateral/equilateral9.jpg', 'Wannabe a niggah all day and tommorrow')
+    +series-products('collections/equilateral', 'equilateral/equilateral10.jpg', 'Wannabe a niggah all day and tommorrow')
+    +series-products('collections/equilateral', 'equilateral/equilateral11.jpg', 'Wannabe a niggah all day and tommorrow')
+    +series-products('collections/equilateral', 'equilateral/equilateral12.jpg', 'Wannabe a niggah all day and tommorrow')
+    +series-products('collections/equilateral', 'equilateral/equilateral13.jpg', 'Wannabe a niggah all day and tommorrow')
+    +series-products('collections/equilateral', 'equilateral/equilateral14.jpg', 'Wannabe a niggah all day and tommorrow')
+    +series-products('collections/equilateral', 'equilateral/equilateral15.jpg', 'The Marylin')
+    +series-products('collections/equilateral', 'equilateral/equilateral16.jpg', 'Wannabe a niggah all day and tommorrow')
+    +series-products('collections/equilateral', 'equilateral/equilateral17.jpg', 'Wannabe a niggah all day and tommorrow')
+    +series-products('collections/equilateral', 'equilateral/equilateral3.jpg', 'Wannabe a niggah all day and tommorrow')
+    +series-products('collections/equilateral', 'equilateral/equilateral4.jpg', 'Wannabe a niggah all day and tommorrow')
+    +series-products('collections/equilateral', 'equilateral/equilateral5.jpg', 'Wannabe a niggah all day and tommorrow')
+    +series-products('collections/equilateral', 'equilateral/equilateral6.jpg', 'Wannabe a niggah all day and tommorrow')
+    +series-products('collections/equilateral', 'equilateral/equilateral10.jpg', 'Wannabe a niggah all day and tommorrow')
+    +series-products('collections/equilateral', 'equilateral/equilateral9.jpg', 'Wannabe a niggah all day and tommorrow')
+    +series-products('collections/equilateral', 'equilateral/equilateral8.jpg', 'Wannabe a niggah all day and tommorrow')
+    +series-products('collections/equilateral', 'equilateral/equilateral7.jpg', 'Wannabe a niggah all day and tommorrow')
+    +series-products('collections/equilateral', 'equilateral/equilateral17.jpg', 'Wannabe a niggah all day and tommorrow')
+
+  .seriesbutton
+    button Load More...

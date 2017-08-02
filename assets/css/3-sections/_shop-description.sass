@@ -1,0 +1,17 @@
+.shop-description, .contact-description
+  padding: 0 $base-spacing $base-spacing
+  h1
+    font-size: $base-spacing*3
+    letter-spacing: $base-spacing/6
+    text-transform: uppercase
+
+  p
+    margin: $base-spacing 0
+
+  .triangle-shop
+    @include triangle(50px 40px, $cr7-darkgrey, down)
+    margin: auto
+
+@media #{$mc-xxlarge}, #{$tq-large}
+  .shop-description, .contact-description
+    padding-top: $base-spacing

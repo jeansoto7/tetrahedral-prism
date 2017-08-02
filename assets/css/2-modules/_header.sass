@@ -1,0 +1,326 @@
+.header, .mobile-nav
+  li a
+    line-height: 1
+
+    &:hover
+      color: $cr7-thirdgrey
+      border-bottom: 2px solid $cr7-thirdgrey
+      transform: translateY(-$base-spacing/8)
+
+  .active-nav
+    display: none
+
+  .activated
+    font-weight: 400
+    .active-nav
+      display: block
+
+  .active-nav
+    @include triangle(2em $base-spacing*0.8, $cr7-darkgrey, down)
+    transition: all 0.3s ease-in-out
+    position: absolute
+    right: 50%
+    transform: translateX(50%)
+
+  .active-nav::before
+    content: ""
+    position: absolute
+    z-index: -1
+    height: $base-spacing*1.5
+    width: $base-spacing*3
+    right: 50%
+    transform: translateX(50%) translateY(-100%)
+
+
+.site-nav ul li a:hover > .active-nav, .mobile-nav ul li a:hover > .active-nav, .product-nav ul li a:hover > .active-nav
+  @include triangle(2em $base-spacing*0.8, $cr7-thirdgrey, down)
+
+.header
+  z-index: 100
+  width: 15%
+
+  .header-position, ul, li, .tetra-anchor, .social-media
+    display: flex
+
+  .header-position, ul, .tetra-anchor
+    flex-direction: column
+
+  .header-position
+    background-color: $cr7-lightgrey
+    position: fixed
+    z-index: 100
+    overflow-x: hidden
+    overflow-y: auto
+    width: 15%
+    padding: $base-spacing/2
+    min-height: 700px
+    top: 0
+    left: 0
+    height: 100vh
+
+  ul, a, .logo, h1
+    text-align: center
+
+  hr
+    width: 70%
+    margin: 0 auto
+    border-bottom: $base-spacing/20 solid $cr7-darkgrey
+
+  h1
+    font-size: 2vw
+    line-height: 1.3
+
+  ul
+    height: 90%
+    margin-bottom: $base-spacing
+
+  li
+    justify-content: center
+    align-items: center
+    position: relative
+    height: 20%
+
+  .site-nav
+    margin-top: 5%
+    height: 60%
+
+  .tetra-anchor
+    height: 30%
+    justify-content: space-around
+
+  .logo
+    width: 70%
+
+  .social-media
+    justify-content: space-around
+    height: 10%
+    padding-top: $base-spacing
+
+  .fa
+    font-size: $base-spacing*1.1
+    transition: $base-transition
+
+    &:hover
+      -webkit-text-stroke: $base-spacing/20 $cr7-darkgrey
+      color: rgba(51, 51, 51, 0.3)
+
+  .fa-instagram:hover
+    -webkit-text-stroke: $base-spacing/30 $cr7-darkgrey
+
+  .mobile-nav-toggle
+    display: none
+
+  // Triangle Pointing Up
+  .mobile-nav-toggle
+    width: 40px
+    height: 30px
+    cursor: pointer
+    align-items: center
+
+    span,
+    span:before,
+    span:after
+      content: ""
+      display: block
+      height: 2px
+      width: 100%
+      background: $cr7-darkgrey
+      position: relative
+      transition: all 0.3s ease-in-out
+
+    span:before
+      top: 10px
+
+    span:after
+      bottom: 12px
+
+    &.is-open span
+      transform: translateY(22px)
+
+    &.is-open span:before
+      margin-left: 5px
+      transform: translateX(4.4px) translateY(-26.7px) rotate(60deg)
+
+    &.is-open span:after
+      margin-left: 5px
+      transform: translateX(-14.9px) translateY(-6.7px) rotate(-60deg)
+
+  .active-nav
+    margin-top: $base-spacing/2.5
+    top: 50%
+    transform: translateX(50%) translateY(50%)
+
+
+// Mobile Nav
+.mobile-nav
+  position: fixed
+  z-index: 5
+  width: 100%
+  height: 100vh
+  background: $cr7-lightgrey
+  padding: 70px $base-spacing
+  transform: translateY(-100%)
+  transition: all 0.3s ease-in-out
+
+  ul, .mobile-social-media
+    display: flex
+    border: 1px solid #ccc
+
+  ul
+    text-align: center
+    flex-direction: column
+    justify-content: space-around
+    height: calc(80vh - 70px)
+
+  .fa, ul li
+    font-size: $base-spacing*1.2
+
+  .mobile-social-media
+    width: 100%
+    height: calc(20vh - 70px)
+    justify-content: center
+    align-items: center
+
+  .fa
+    margin: 0px $base-spacing*0.7
+
+  &.is-open
+    position: fixed
+    transform: translateY(0%)
+
+
+@media #{$mc-xxxxlarge}, #{$tq-medium}, #{$tq-large}
+  .header .info-content-left
+    box-shadow: none
+
+  .header
+    width: 100%
+    max-width: 100%
+    position: absolute
+
+    .header-position
+      width: 100%
+      overflow: visible
+      background-color: $cr7-transparentheader
+      min-height: 70px
+      height: 70px
+      padding: 0
+
+    .site-nav, .social-media, .tetra-anchor h1
+      display: none
+
+    .tetra-anchor
+      position: absolute
+      height: 100%
+
+    .logo
+      height: 75px
+      width: auto
+      margin-top: $base-spacing*2
+      margin-left: $base-spacing
+
+    .mobile-nav-toggle
+      display: flex
+      position: absolute
+      right: $base-spacing
+      top: 50%
+      transform: translateY(-50%)
+
+@media #{$tq-medium}, #{$tq-large}
+  .mobile-nav
+    padding: 6vh $base-spacing
+
+    .fa, ul li
+      font-size: $base-spacing*1.6
+
+    ul
+      height: 74vh
+
+    .mobile-social-media
+      height: 14vh
+
+  .header
+    .header-position
+      min-height: 6vh
+
+    .logo
+      height: 7vh
+
+    .mobile-nav-toggle
+      width: 4.5vh
+      height: 5vh
+
+@media #{$tq-medium}
+  .header
+    .mobile-nav-toggle
+
+      span:before
+        top: 1.1vh
+
+      span:after
+        bottom: 1.18vh
+
+      &.is-open span
+        transform: translateY(25px)
+
+      &.is-open span:before
+        margin-left: 10.5px
+        transform: translateX(4.4px) translateY(-40.5px) rotate(60deg)
+
+      &.is-open span:after
+        margin-left: 0
+        transform: translateX(-14.9px) translateY(-12px) rotate(-60deg)
+
+// Kindle Fire HD
+@media #{$tq-large}
+  .header
+    .mobile-nav-toggle
+      span,
+      span:before,
+      span:after
+        height: 3px
+
+      span:before
+        top: 1.1vh
+
+      span:after
+        bottom: 1.12vh
+
+      &.is-open span
+        transform: translateY(50px)
+
+      &.is-open span:before
+        margin-left: 24px
+        transform: translateX(4.4px) translateY(-78px) rotate(60deg)
+
+      &.is-open span:after
+        margin-left: -13.5px
+        transform: translateX(-14.9px) translateY(-24px) rotate(-60deg)
+
+  .mobile-nav
+    transform: translateY(-120%)
+
+
+@media #{$mc-jsmall}
+  .header
+    .header-position
+      min-height: 50px
+      height: 50px
+
+    .logo
+      height: 60px
+
+@media #{$mc-medium}
+  .mobile-nav
+    padding-bottom: 0
+
+    ul
+      height: calc(90vh - 70px)
+
+    .mobile-social-media
+      height: 9vh
+
+@media #{$mc-asmall}
+  .mobile-nav
+    .fa, ul li
+      font-size: $base-spacing*0.8

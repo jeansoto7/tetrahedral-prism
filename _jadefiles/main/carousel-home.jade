@@ -1,0 +1,49 @@
+mixin carousel(title, href, info, bottoninfo, backgroundimg)
+  li.slide
+    .carousel-info-button.carousel-height
+      h1 #{title}
+      p #{info}
+      a(href="/#{href}")
+        button.top-carousel-button.button #{bottoninfo}
+    .overlay.carousel-height
+    .carousel-image.img-small.carousel-height(style="background-image: url(/assets/img/home/carousel/#{backgroundimg}-small.jpg)")
+    .carousel-image.img-medium.carousel-height(style="background-image: url(/assets/img/home/carousel/#{backgroundimg}-medium.jpg)")
+    .carousel-image.img-large.carousel-height(style="background-image: url(/assets/img/home/carousel/#{backgroundimg}-large.jpg)")
+    .carousel-image.img-xlarge.carousel-height(style="background-image: url(/assets/img/home/carousel/#{backgroundimg}-xlarge.jpg)")
+    .carousel-image.img-xxlarge.carousel-height(style="background-image: url(/assets/img/home/carousel/#{backgroundimg}-xxlarge.jpg)")
+    .carousel-image.img-xxxlarge.carousel-height(style="background-image: url(/assets/img/home/carousel/#{backgroundimg}-xxxlarge.jpg)")
+
+.carousel.carousel-height
+  #slider-wrap
+    .arrows-carousel.carousel-height
+      #toggle-left
+        i.previousarrow.fa.fa-angle-left
+      #toggle-right
+        i.nextarrow.fa.fa-angle-right
+
+
+    #slider-paging.carousel-height
+      ul.slider-pages
+        li#slider-page-1.slider-page.active
+          .triangle-bottom
+          .triangle-top
+        li#slider-page-2.slider-page
+          .triangle-bottom
+          .triangle-top
+        li#slider-page-3.slider-page
+          .triangle-bottom
+          .triangle-top
+        li#slider-page-4.slider-page
+          .triangle-bottom
+          .triangle-top
+        li#slider-page-5.slider-page
+          .triangle-bottom
+          .triangle-top
+
+    #slider
+      ul.slides
+        +carousel('Image1', 'collections', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 'Check Check', 'carousel3')
+        +carousel('Image2', 'collections', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 'Check Check', 'carousel3')
+        +carousel('Image3', 'collections', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 'Check Check', 'carousel3')
+        +carousel('Image4', 'collections', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 'Check Check', 'carousel3')
+        +carousel('Image5', 'collections', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 'Check Check', 'carousel3')

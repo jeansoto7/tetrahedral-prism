@@ -1,0 +1,139 @@
+mixin img(image, title)
+  img(src="/assets/img/shop/products/#{image}", title="#{title}", alt="#{title}").other-img
+
+mixin main(image, title)
+  img(src="/assets/img/shop/products/#{image}", title="#{title}", alt="#{title}")
+
+mixin tricolor(classNames, href, title, className)
+  a.triangles(class=classNames)(class=className)(href='/#{href}')(title='#{title}')
+    .tricolor-bottom
+    .tricolor-top
+    .tricolor-active
+
+mixin triback(href, image, title, className)
+  .triback(class=className)
+    a.triimg(href='/#{href}')
+      img(src="/assets/img/shop/colors/#{image}", title="#{title}", alt="#{title}")
+    a.tricolor-bottom(href='/#{href}')
+    a.tricolor-active(href='/#{href}')
+
+mixin list-drop(url, info, className)
+  li(class=className): a(href="/#{url}") #{info}
+
+.product-page.container-shadow
+  .product-images
+    .product-imgs
+      +img('men/men-tshirts/product.jpg', 'Wannabe')
+      +img('men/men-tshirts/product2.jpg', 'Wannabe')
+    .product-background
+      +main('men/men-tshirts/product.jpg', 'Wannabe')
+
+  .product-content
+    .product-info
+      h2.ellipsis-text Rise Again (Solar Eclipse)
+      h3 Classic T-Shirts
+      p $23.14
+      hr
+    .col-left
+      .clothing-style
+        h4 Clothing Style
+        
+        .select-option
+          ul.drop-menu.product-menu Lightweight Hoodies
+            +list-drop('index.html', 'T-Shirts')
+            +list-drop('index.html', 'Classic T-Shirts')
+            +list-drop('index.html', 'Tri-Blend T-Shirts', 'active')
+            +list-drop('index.html', 'Graphic T-Shirts')
+            +list-drop('index.html', 'V-Necks')
+            +list-drop('index.html', 'Long Sleeves')
+            +list-drop('index.html', 'Baseball Sleeves')
+            +list-drop('index.html', 'Lightweight Hoodies')
+            +list-drop('index.html', 'Hoodies')
+            +list-drop('index.html', 'Sweatshirts')
+          .select-triangle
+
+        //- select(name='Tetrahedral', onchange='location = this.value;')
+        //-   option(value='/collections') Home
+        //-   option(value='/collections') Contact
+        //-   option(value='/collections', selected='selected') About
+
+        .box-colors
+          +tricolor('white', 'series', 'White', 'active-color')
+          +tricolor('black', 'series', 'Black')
+          +tricolor('light-grey', 'series', 'Light-Grey')
+          +tricolor('dark-grey', 'series', 'Dark-Grey')
+          +tricolor('light-blue', 'series', 'Light-Blue')
+          +tricolor('blue', 'series', 'Blue')
+          +tricolor('dark-blue', 'series', 'Dark-Blue')
+          +tricolor('creme', 'series', 'Creme')
+          +tricolor('gold', 'series', 'Gold')
+          +tricolor('orange', 'series', 'Orange')
+          +tricolor('red', 'series', 'Red')
+          +tricolor('dark-red', 'series', 'Dark-Red')
+          +tricolor('eggplant', 'series', 'Eggplant')
+          +tricolor('green', 'series', 'Green')
+          +tricolor('army', 'series', 'Army')
+          +tricolor('brown', 'series', 'Brown')
+          +triback('series', 'heather-grey.jpg', 'Heather Grey')
+          +triback('series', 'charcoal-heather.jpg', 'Charcoal Heather')
+
+        hr
+
+    .col-right
+      .product-options
+        .options-1
+          button S
+          button M
+          button L
+          button XL
+          button 2XL
+          button 3XL
+        .options-2
+          button Front
+          p OR
+          button Back
+        hr
+
+      .share-it
+        .share-button
+          p.share-icon.open-icons Share This
+          .icon-wrapper
+            ul
+              li
+                a(target='_blank', href='https://twitter.com/share', data-url='{{ content.absolute_url }}')
+                  i.fa.fa-instagram
+              li
+                a(target='_blank', href='https://facebook.com/sharer/sharer.php?', data-url='{{ content.absolute_url }}')
+                  i.fa.fa-facebook
+              li
+                a(target='_blank', href='', onclick="javascript:window.open('http://www.linkedin.com/shareArticle?mini=true&url={{ content.absolute_url }}&title=','popup','width=600,height=600');")
+                  i.fa.fa-twitter
+              li
+                a(target='_blank', href='https://plus.google.com/share?url={{ content.absolute_url }}', onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;")
+                  i.fa.fa-tumblr
+              li
+                a(href='mailto:info@silvertech.com')
+                  i.fa.fa-pinterest-p
+              li
+                .close-social-icons
+                  i.fa.fa-times.close-icons
+
+        .download-button
+          a(href="/series").download-anchor Download Wallpaper
+            .download-title
+            .download-icon
+              .download-triangle
+
+
+      hr
+
+      .features
+        ul
+          li Plain colour t-shirts are 100% Cotton, Heather Grey is 90% Cotton/10% Polyester, Charcoal Heather is 52% Cotton/48% Polyester
+        hr
+
+    hr.pro-hr
+
+    .buy-now
+      a(href="/series")
+        button Buy Now

@@ -1,0 +1,98 @@
+.shop-list
+  .top-lists
+    font-weight: 400
+
+  .panels
+    justify-content: space-between
+
+    > li
+      width: calc(100%/9)
+
+  ul.drop-menu
+    z-index: 10
+    top: 100%
+    left: 0%
+
+    li
+      line-height: $base-line-height*1.8
+      display: none
+
+  li:hover > ul.drop-it li
+    display: block
+
+  li:hover > ul.drop-it
+    perspective: 1000px
+
+    li
+      opacity: 0
+
+      @for $i from 1 through 20
+        &:nth-child(#{$i})
+          animation:
+            name: menu1
+            duration: 100ms * $i/1.5
+            timing-function: ease-in-out
+            fill-mode: forwards
+            delay: 150ms
+
+.shop-list, .collections-list, .series-list
+
+  .activated, .panel-series
+    font-weight: 600
+
+  .activated
+    border-bottom: 2px solid rgba(51, 51, 51, 0.5)
+
+  .panels > li > a
+    white-space: nowrap
+    display: block
+
+  .panels
+    display: flex
+
+    > li
+      text-align: center
+      height: $base-spacing*4
+      line-height: $base-spacing*4
+      font-size: $base-spacing*0.9
+      position: relative
+      transition: all 0.3s ease-in-out
+
+      &:hover
+        background: rgba(51, 51, 51, 0.1)
+
+.collections-list, .series-list
+  .panels
+    > li
+      width: 100%
+
+.series-list
+  .panels
+    li
+      font-size: $base-spacing*1
+    a:before
+      transition: $base-transition
+      font-family: FontAwesome
+      color: $cr7-darkgrey
+      content: "\f060"
+      margin-right: $base-spacing
+
+  .panels:hover a:before
+    -webkit-text-stroke: $base-spacing/30 $cr7-darkgrey
+    color: rgba(51, 51, 51, 0.3)
+
+@media #{$mc-xxxlarge}
+  .shop-list
+    overflow-x: scroll
+    overflow-y: hidden
+
+    .panels
+      width: 900px
+
+@media #{$mc-medium}
+  .collections-list
+    overflow-x: scroll
+    overflow-y: hidden
+
+    .panels
+      width: 500px

@@ -1,0 +1,68 @@
+.contact-form.the-heading.container-shadow
+
+  .form-heading
+    h1 Get in touch
+    hr.thehr
+  
+  //- Search for php form when submitting website on server
+  //- update this one as well
+  .form-fill-out
+    #mc_form
+      form(method='POST', action='https://formspree.io/cr7designs@icloud.com')
+        .form-display
+          .row-1
+            .mc-field-group.group-name
+              input(type='text', name='name')
+              label Your Name... 
+            .mc-field-group.group-subject
+              input(type='text', name='subject')
+              label Your Subject... 
+            .mc-field-group.group-email
+              input(type='email', name='_replyto')
+              label Your Email... 
+          .row-2
+            .mc-field-group.group-message
+              input(type='text', name='subject')
+              label Your Message... 
+          .group-submit
+            input.submit-button(type='submit', value='Submit')
+  
+  
+  //- .form-fill-out.
+  //-   <div id="mc_form">
+  //-     <form method="POST" action="https://formspree.io/cr7designs@icloud.com">
+  //-       
+  //-       <div class="form-display">
+  //-         <div class="row-1">
+  //-           <div class="mc-field-group group-name">
+  //-             <input type="text" name="name">
+  //-             <label>Your Name... </label>
+  //-           </div>
+  //-           
+  //-           <div class="mc-field-group group-subject">
+  //-             <input type="text" name="subject">
+  //-             <label>Your Subject... </label>
+  //-           </div>
+  //-           
+  //-           <div class="mc-field-group group-email">
+  //-             <input type="email" name="_replyto">
+  //-             <label>Your Email... </label>
+  //-           </div>
+  //-           
+  //-         </div>
+  //-         
+  //-         <div class="row-2">
+  //-           <div class="mc-field-group group-message">
+  //-             <input type="text" name="subject">
+  //-             <label>Your Message... </label>
+  //-           </div>
+  //-         </div>
+  //-           
+  //-         <div class="group-submit">
+  //-           <input type="submit" value="Submit" class="submit-button">
+  //-         </div>
+  //-       </div>
+  //-     
+  //-     </form>
+  //-   </div>
+    

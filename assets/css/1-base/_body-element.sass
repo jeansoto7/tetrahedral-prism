@@ -1,0 +1,144 @@
+// Prevent Firefox Scrollbar Jump
+html
+  overflow-y: scroll
+
+body
+  background: $cr7-lightgrey
+  font-size: $base-font-size*0.9
+  line-height: $base-line-height
+  font-family: 'Fira Sans', sans-serif
+  -webkit-font-smoothing: antialiased
+  -webkit-text-size-adjust: 100%
+
+  @media #{$mc-xxlarge}
+    font-size: $base-font-size*1
+
+  @media #{$mq-small}
+    font-size: $base-font-size*0.8
+    line-height: $base-line-height*1.1
+
+  @media #{$mq-medium}
+    font-size: $base-font-size*0.9
+    line-height: $base-line-height*1.2
+
+  @media #{$mq-large}
+    font-size: $base-font-size*1.1
+
+  @media #{$mq-mlarge}
+    font-size: $base-font-size*1.2
+
+  @media #{$mq-xlarge}, #{$tq-medium}
+    font-size: $base-font-size*1.3
+
+  @media #{$mq-xxlarge}
+    font-size: $base-font-size*1.6
+
+  @media #{$mq-xxxlarge}
+    font-size: $base-font-size*2.4
+
+  @media #{$tq-large}
+    font-size: $base-font-size*2
+
+    .sections
+      margin-bottom: 500px
+
+    .footer
+      height: 500px
+
+  @media #{$tq-medium}, #{$tq-large}
+    .sections
+      padding-top: 6vh
+
+  @media #{$mc-xxxxlarge}, #{$tq-medium}, #{$tq-large}
+    .sections, .footer
+      width: 100%
+
+    .footer
+      margin-left: 0
+
+    .sections
+      padding-top: 70px
+
+    .home-wrap
+      display: block
+
+  @media #{$mc-jsmall}
+    .sections
+      padding-top: 50px
+
+  // ---
+  @media #{$mc-large}
+    font-size: $base-font-size*1.2
+
+  @media #{$mc-small}
+    font-size: $base-font-size*1.1
+
+.home-wrap
+  width: 100%
+  display: flex
+  animation-name: fadeIn
+  animation-duration: 0.5s
+  // animation-fill-mode: both
+
+
+img
+  vertical-align: bottom
+
+
+.sections
+  width: 85%
+  position: relative
+  z-index: 2
+  margin-bottom: 300px
+  background: $cr7-lightgrey
+
+  .img-medium, .img-large, .img-xlarge, .img-xxlarge, .img-xxxlarge
+    display: none
+
+  @media #{$mq-small}
+    .img-small
+    //   display: block
+
+  @media #{$mq-medium}
+    .img-small
+      display: none
+
+    .img-medium
+      display: block
+
+  @media #{$mq-large}
+    .img-medium
+      display: none
+
+    .img-large
+      display: block
+
+  @media #{$mq-xlarge}
+    margin-bottom: 350px
+    .img-large
+      display: none
+
+    .img-xlarge
+      display: block
+
+  @media #{$mq-xxlarge}
+    margin-bottom: 400px
+    .img-xlarge
+      display: none
+
+    .img-xxlarge
+      display: block
+
+  @media #{$mq-xxxlarge}
+    margin-bottom: 550px
+    .img-xxlarge
+      display: none
+
+    .img-xxxlarge
+      display: block
+
+  @media #{$mc-large}
+    margin-bottom: 350px
+
+  @media #{$mc-medium}
+    margin-bottom: 470px
