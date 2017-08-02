@@ -1,4 +1,5 @@
-name: Your New Jekyll Site
 markdown: redcarpet
+baseurl: /tetrahedral-prism
 exclude: ["node_modules", "gulpfile.js", "package.json"]
 permalink: pretty
+highlighter: pygments

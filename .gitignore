@@ -1,5 +1,6 @@
 .idea
 node_modules
+_site
 
 # Created by https://www.gitignore.io/api/windows,jekyll,sass
 
