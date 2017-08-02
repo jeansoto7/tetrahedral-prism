@@ -6,12 +6,12 @@ mixin carousel(title, href, info, bottoninfo, backgroundimg)
       a(href="{{site.baseurl}}/#{href}")
         button.top-carousel-button.button #{bottoninfo}
     .overlay.carousel-height
-    .carousel-image.img-small.carousel-height(style="background-image: url(/assets/img/home/carousel/#{backgroundimg}-small.jpg)")
-    .carousel-image.img-medium.carousel-height(style="background-image: url(/assets/img/home/carousel/#{backgroundimg}-medium.jpg)")
-    .carousel-image.img-large.carousel-height(style="background-image: url(/assets/img/home/carousel/#{backgroundimg}-large.jpg)")
-    .carousel-image.img-xlarge.carousel-height(style="background-image: url(/assets/img/home/carousel/#{backgroundimg}-xlarge.jpg)")
-    .carousel-image.img-xxlarge.carousel-height(style="background-image: url(/assets/img/home/carousel/#{backgroundimg}-xxlarge.jpg)")
-    .carousel-image.img-xxxlarge.carousel-height(style="background-image: url(/assets/img/home/carousel/#{backgroundimg}-xxxlarge.jpg)")
+    .carousel-image.img-small.carousel-height(style="background-image: url({{site.baseurl}}/assets/img/home/carousel/#{backgroundimg}-small.jpg)")
+    .carousel-image.img-medium.carousel-height(style="background-image: url({{site.baseurl}}/assets/img/home/carousel/#{backgroundimg}-medium.jpg)")
+    .carousel-image.img-large.carousel-height(style="background-image: url({{site.baseurl}}/assets/img/home/carousel/#{backgroundimg}-large.jpg)")
+    .carousel-image.img-xlarge.carousel-height(style="background-image: url({{site.baseurl}}/assets/img/home/carousel/#{backgroundimg}-xlarge.jpg)")
+    .carousel-image.img-xxlarge.carousel-height(style="background-image: url({{site.baseurl}}/assets/img/home/carousel/#{backgroundimg}-xxlarge.jpg)")
+    .carousel-image.img-xxxlarge.carousel-height(style="background-image: url({{site.baseurl}}/assets/img/home/carousel/#{backgroundimg}-xxxlarge.jpg)")
 
 .carousel.carousel-height
   #slider-wrap
