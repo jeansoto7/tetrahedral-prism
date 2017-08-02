@@ -1,5 +1,5 @@
 mixin fbtu-image(backgroundimg, className)
-  a(target="_blank" href="https://www.facebook.com/officialcr7designs/" style="background-image: url(/assets/img/contact/facebook/#{backgroundimg})").fbtu-thumb(class=className)
+  a(target="_blank" href="https://www.facebook.com/officialcr7designs/" style="background-image: url({{site.baseurl}}/assets/img/contact/facebook/#{backgroundimg})").fbtu-thumb(class=className)
 
 
 .contact-facebook.content-height.container-shadow
@@ -8,7 +8,7 @@ mixin fbtu-image(backgroundimg, className)
 
   .fbtu-overlap.content-height
     a(target="_blank" href="https://www.facebook.com/officialcr7designs/")
-      img(src="/assets/img/contact/facebook/fb-overlap.jpg")
+      img(src="{{site.baseurl}}/assets/img/contact/facebook/fb-overlap.jpg")
 
 
   .fbtu-images

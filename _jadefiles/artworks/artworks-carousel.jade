@@ -1,12 +1,12 @@
 mixin shopslider(href, iconimg, title, buttoninfo)
   ul.shop-slides
     li.shop-slide
-      a(href="/#{href}")
+      a(href="{{site.baseurl}}/#{href}")
         .shop-image-anchors
           img(src="/assets/img/home/shop-carousel/#{iconimg}", title="#{title}", alt="#{title}").imgshop.imgzoom.lazyload.blur-up
       .carousel-shop-button
         h3 #{title}
-        a(href="/#{href}")
+        a(href="{{site.baseurl}}/#{href}")
           button.info-shop-button #{buttoninfo}
 
 .product-carousel.the-heading.container-shadow

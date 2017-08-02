@@ -1,27 +1,27 @@
 mixin main(image, title)
   .product-background(title='#{title}')
-    img.prdback.lazyload.blur-up(data-sizes='(max-width: 700px) 100vw, 50vw', src='/assets/img/series/#{image}-low.jpg', data-srcset='\
-    /assets/img/series/#{image}-small.jpg 768w, /assets/img/series/#{image}-medium.jpg 1024w,\
-    /assets/img/series/#{image}-large.jpg 1366w,\
-    /assets/img/series/#{image}-xlarge.jpg 1920w,\
-    /assets/img/series/#{image}-xxlarge.jpg 2560w,\
-    /assets/img/series/#{image}-xxxlarge.jpg 3840w', title="#{title}", alt="#{title}")
+    img.prdback.lazyload.blur-up(data-sizes='(max-width: 700px) 100vw, 50vw', src='{{site.baseurl}}/assets/img/series/#{image}-low.jpg', data-srcset='\
+    {{site.baseurl}}/assets/img/series/#{image}-small.jpg 768w, {{site.baseurl}}/assets/img/series/#{image}-medium.jpg 1024w,\
+    {{site.baseurl}}/assets/img/series/#{image}-large.jpg 1366w,\
+    {{site.baseurl}}/assets/img/series/#{image}-xlarge.jpg 1920w,\
+    {{site.baseurl}}/assets/img/series/#{image}-xxlarge.jpg 2560w,\
+    {{site.baseurl}}/assets/img/series/#{image}-xxxlarge.jpg 3840w', title="#{title}", alt="#{title}")
 
 mixin collections(image, title, classNames)
-  a(href="/series")(title='#{title}').collection-img
+  a(href="{{site.baseurl}}/series")(title='#{title}').collection-img
     img(src="/assets/img/series/#{image}", title="#{title}", alt="#{title}")(class=classNames)
 
 mixin products(image, title)
-  a(href="/series").shop-images
+  a(href="{{site.baseurl}}/series").shop-images
     img(src="/assets/img/home/shop-carousel/#{image}", title="#{title}", alt="#{title}")
 
 .artworks-page.container-shadow.teaser.lazyload(data-expand='-110')
   .product-images
     +main('equilateral/equilateral8', 'All Praises To Be')
     .arrows-carousel
-      a(href="/series").toggle-left
+      a(href="{{site.baseurl}}/series").toggle-left
         .fa.fa-angle-left
-      a(href="/series").toggle-right
+      a(href="{{site.baseurl}}/series").toggle-right
         .fa.fa-angle-right
         
         
@@ -60,7 +60,7 @@ mixin products(image, title)
                 i.fa.fa-times.close-icons
 
       .download-button
-        a(href="/series").download-anchor Download Wallpaper
+        a(href="{{site.baseurl}}/series").download-anchor Download Wallpaper
           .download-title
           .download-icon
             .download-triangle

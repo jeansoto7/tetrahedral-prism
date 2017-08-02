@@ -1,10 +1,10 @@
 mixin homeback(backgroundimg)
-  .homeback(style="background-image: url(/assets/img/home/zoom/#{backgroundimg})").content-height
+  .homeback(style="background-image: url({{site.baseurl}}/assets/img/home/zoom/#{backgroundimg})").content-height
 
 
 .home-image-download.content-height
   .download-bg-1.content-height
     h2 Download all CR7Designs in HD
-    a(href="/collections")
+    a(href="{{site.baseurl}}/collections")
       button.button Download Now
   +homeback('cristianobg2.jpg')

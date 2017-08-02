@@ -1,12 +1,12 @@
 mixin shopslider(href, iconimg, title, buttoninfo)
   ul.shop-slides.content-height.hsc3
     li.shop-slide
-      a(href="/#{href}")
+      a(href="{{site.baseurl}}/#{href}")
         .shop-image-anchors
-          img.lazyload.blur-up(data-src="/assets/img/home/shop-carousel/#{iconimg}", title="#{title}", alt="#{title}").imgshop.imgzoom
+          img.lazyload.blur-up(data-src="{{site.baseurl}}/assets/img/home/shop-carousel/#{iconimg}", title="#{title}", alt="#{title}").imgshop.imgzoom
       .carousel-shop-button
         h3.ellipsis-text #{title}
-        a(href="/#{href}")
+        a(href="{{site.baseurl}}/#{href}")
           button.info-shop-button #{buttoninfo}
 
 
@@ -22,7 +22,7 @@ mixin shopslider(href, iconimg, title, buttoninfo)
     h1 Delite
     hr.thehr
     p Shop a wide range of products. Delite with awesomeness
-    a(href="/products")
+    a(href="{{site.baseurl}}/products")
       button.info-shop-button.display-none-shop Shop Now
 
   .shop-slider

@@ -1,15 +1,15 @@
 mixin homeback(backgroundimg, title)
   .homeback.lazyload.content-height(data-sizes='(max-width: 900px) 100vw, 80vw', data-bgset='\
-  /assets/img/series/#{backgroundimg}-small.jpg 768w, /assets/img/series/#{backgroundimg}-medium.jpg 1024w,\
-  /assets/img/series/#{backgroundimg}-large.jpg 1366w,\
-  /assets/img/series/#{backgroundimg}-xlarge.jpg 1920w,\
-  /assets/img/series/#{backgroundimg}-xxlarge.jpg 2560w,\
-  /assets/img/series/#{backgroundimg}-xxxlarge.jpg 3840w', title="#{title}")
+  {{site.baseurl}}/assets/img/series/#{backgroundimg}-small.jpg 768w, {{site.baseurl}}/assets/img/series/#{backgroundimg}-medium.jpg 1024w,\
+  {{site.baseurl}}/assets/img/series/#{backgroundimg}-large.jpg 1366w,\
+  {{site.baseurl}}/assets/img/series/#{backgroundimg}-xlarge.jpg 1920w,\
+  {{site.baseurl}}/assets/img/series/#{backgroundimg}-xxlarge.jpg 2560w,\
+  {{site.baseurl}}/assets/img/series/#{backgroundimg}-xxxlarge.jpg 3840w', title="#{title}")
 
 
 .home-image-download.content-height
   .download-bg-1.content-height
     h2 Download all CR7Designs in HD
-    a(href="/collections")
+    a({{site.baseurl}}href="/collections")
       button.button Download Now
   +homeback('equilateral/equilateral8', 'Tetra')

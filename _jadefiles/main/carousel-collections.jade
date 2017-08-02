@@ -3,10 +3,10 @@ mixin carousel(title, href, info, bottoninfo, backgroundimg)
     .carousel-info-button.carousel-height
       h1 #{title}
       p #{info}
-      a(href="/#{href}")
+      a(href="{{site.baseurl}}/#{href}")
         button.top-carousel-button.button #{bottoninfo}
     .overlay.carousel-height
-    .carousel-image.carousel-height(style="background-image: url(/assets/img/series/carousel/#{backgroundimg})")
+    .carousel-image.carousel-height(style="background-image: url({{site.baseurl}}/assets/img/series/carousel/#{backgroundimg})")
 
 .carousel.carousel-height
   #slider-wrap

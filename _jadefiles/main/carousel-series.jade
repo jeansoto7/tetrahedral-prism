@@ -7,11 +7,11 @@ mixin carousel(title, href, info, bottoninfo, backgroundimg)
         button.top-carousel-button.button #{bottoninfo}
     .overlay.carousel-height
     .carousel-image.lazyload.carousel-height(data-sizes='(max-width: 900px) 100vw, 80vw', data-bgset='\
-    /assets/img/series/#{backgroundimg}-small.jpg 768w, /assets/img/series/#{backgroundimg}-medium.jpg 1024w,\
-    /assets/img/series/#{backgroundimg}-large.jpg 1366w,\
-    /assets/img/series/#{backgroundimg}-xlarge.jpg 1920w,\
-    /assets/img/series/#{backgroundimg}-xxlarge.jpg 2560w,\
-    /assets/img/series/#{backgroundimg}-xxxlarge.jpg 3840w', title="#{title}")
+    {{site.baseurl}}/assets/img/series/#{backgroundimg}-small.jpg 768w, {{site.baseurl}}/assets/img/series/#{backgroundimg}-medium.jpg 1024w,\
+    {{site.baseurl}}/assets/img/series/#{backgroundimg}-large.jpg 1366w,\
+    {{site.baseurl}}/assets/img/series/#{backgroundimg}-xlarge.jpg 1920w,\
+    {{site.baseurl}}/assets/img/series/#{backgroundimg}-xxlarge.jpg 2560w,\
+    {{site.baseurl}}/assets/img/series/#{backgroundimg}-xxxlarge.jpg 3840w', title="#{title}")
 
 .carousel.carousel-height
   #slider-wrap

@@ -1,8 +1,8 @@
 mixin series-products(href, image, title)
   .product-box
-    a(href="/#{href}")
+    a(href="{{site.baseurl}}/#{href}")
       .product-image
-        img(src="/assets/img/collections/#{image}", title="#{title}", alt="#{title}")
+        img(src="{{site.baseurl}}/assets/img/collections/#{image}", title="#{title}", alt="#{title}")
         .product-caption
           h2 #{title}
 
