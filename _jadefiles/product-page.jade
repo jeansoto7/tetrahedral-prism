@@ -1,11 +1,11 @@
 mixin img(image, title)
-  img(src="/assets/img/shop/products/#{image}", title="#{title}", alt="#{title}").other-img
+  img(src="{{site.baseurl}}/assets/img/shop/products/#{image}", title="#{title}", alt="#{title}").other-img
 
 mixin main(image, title)
-  img(src="/assets/img/shop/products/#{image}", title="#{title}", alt="#{title}")
+  img(src="{{site.baseurl}}/assets/img/shop/products/#{image}", title="#{title}", alt="#{title}")
 
 mixin tricolor(classNames, href, title, className)
-  a.triangles(class=classNames)(class=className)(href='/#{href}')(title='#{title}')
+  a.triangles(class=classNames)(class=className)(href='{{site.baseurl}}/#{href}')(title='#{title}')
     .tricolor-bottom
     .tricolor-top
     .tricolor-active
@@ -13,12 +13,12 @@ mixin tricolor(classNames, href, title, className)
 mixin triback(href, image, title, className)
   .triback(class=className)
     a.triimg(href='/#{href}')
-      img(src="/assets/img/shop/colors/#{image}", title="#{title}", alt="#{title}")
-    a.tricolor-bottom(href='/#{href}')
-    a.tricolor-active(href='/#{href}')
+      img(src="{{site.baseurl}}/assets/img/shop/colors/#{image}", title="#{title}", alt="#{title}")
+    a.tricolor-bottom(href='{{site.baseurl}}/#{href}')
+    a.tricolor-active(href='{{site.baseurl}}/#{href}')
 
 mixin list-drop(url, info, className)
-  li(class=className): a(href="/#{url}") #{info}
+  li(class=className): a(href="{{site.baseurl}}/#{url}") #{info}
 
 .product-page.container-shadow
   .product-images
