@@ -1074,7 +1074,8 @@ body {
   transition: all 0.3s ease-in-out; }
   #theloader #triangle {
     height: 60vmin;
-    width: 100%; }
+    width: 100%;
+    opacity: 0.8; }
   #theloader svg polygon {
     stroke-dasharray: 20;
     -webkit-animation: dash 2.5s cubic-bezier(0.57, 0.04, 0.5, 0.97) infinite;
@@ -1082,7 +1083,7 @@ body {
   #theloader polygon {
     fill: transparent; }
   #theloader img {
-    opacity: 0.8;
+    opacity: 0.9;
     position: absolute;
     height: 55vmin;
     width: 100%;
