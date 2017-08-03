@@ -1,5 +1,6 @@
 markdown: redcarpet
 baseurl: /tetrahedral-prism
+# baseurl: ''
 exclude: ["node_modules", "gulpfile.js", "package.json"]
 permalink: pretty
 highlighter: rouge
