@@ -2562,7 +2562,9 @@ body {
     overflow-x: scroll;
     overflow-y: hidden; }
     .shop-list .panels {
-      width: 900px; } }
+      width: 900px;
+      overflow-x: scroll;
+      overflow-y: hidden; } }
 
 @media (max-width: 31.25em) {
   .collections-list {

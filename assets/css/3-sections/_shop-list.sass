@@ -4,6 +4,11 @@
 
   .panels
     justify-content: space-between
+    // overflow-x: scroll
+    // overflow-y: hidden
+    // border: 2px solid red
+    // height: 100%
+    // overflow-x: auto
 
     > li
       width: calc(100%/9)
@@ -82,12 +87,18 @@
     color: rgba(51, 51, 51, 0.3)
 
 @media #{$mc-xxxlarge}
+
+  // .panels
+  //   overflow-x: scroll
+
   .shop-list
     overflow-x: scroll
     overflow-y: hidden
 
     .panels
       width: 900px
+      overflow-x: scroll
+      overflow-y: hidden
 
 @media #{$mc-medium}
   .collections-list
