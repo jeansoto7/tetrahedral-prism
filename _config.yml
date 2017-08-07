@@ -1,5 +1,5 @@
 markdown: redcarpet
-baseurl: http://www.tetrahedralprism.com/
+baseurl: http://tetrahedralprism.com/
 # baseurl: ''
 exclude: ["node_modules", "gulpfile.js", "package.json", "CNAME"]
 permalink: pretty
